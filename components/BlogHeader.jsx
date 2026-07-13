@@ -25,10 +25,15 @@ const BlogHeader = () => {
         <div className="max-w-7xl m-auto flex items-center justify-between h-full px-[1rem]">
           
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link
+            href="/"
+            className="flex-shrink-0"
+            aria-label="NorthWind Sanctuary — home"
+            title="NorthWind Sanctuary"
+          >
             <Image
               src={logo150}
-              alt="Godrej Logo"
+              alt="NorthWind Sanctuary by NorthWind Estates"
               className="h-14 w-auto object-contain"
               sizes="(max-width: 768px) 80px, 80px"
               style={{ width: "auto", height: "auto" }}
@@ -42,25 +47,17 @@ const BlogHeader = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-[#D09A40] hover:text-[#C0A15C] transition-colors"
+                className="text-[#C0A15C] hover:text-[#A2854A] transition-colors"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-     
-          {/* <Link
-            href="#enquire"
-            onClick={() => setIsOpen(true)}
-            className="hidden lg:inline-flex items-center justify-center px-[32px] py-[16px] text-white rounded-md"
-            style={{ backgroundColor: "#C0A15C" }}
-          >
-            Download Brochure
-          </Link> */}
-
           {/* Mobile Hamburger */}
           <button
+            type="button"
+            aria-label="Open menu"
             className="lg:hidden flex items-center justify-center w-10 h-10 rounded-sm"
             style={{ backgroundColor: GOLD }}
             onClick={() => setOpen(true)}
@@ -71,7 +68,7 @@ const BlogHeader = () => {
               (e.currentTarget.style.backgroundColor = GOLD)
             }
           >
-            <svg width="20" height="14" viewBox="0 0 20 14">
+            <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">
               <line x1="0" y1="1" x2="20" y2="1" stroke="white" strokeWidth="2" />
               <line x1="0" y1="7" x2="20" y2="7" stroke="white" strokeWidth="2" />
               <line x1="0" y1="13" x2="20" y2="13" stroke="white" strokeWidth="2" />
@@ -92,7 +89,13 @@ const BlogHeader = () => {
       >
         {/* Close */}
         <div className="flex justify-end p-4 border-b">
-          <button onClick={() => setOpen(false)}>✕</button>
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            ✕
+          </button>
         </div>
 
         {/* Mobile Nav */}
@@ -102,23 +105,13 @@ const BlogHeader = () => {
               key={item.label}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="px-6 py-4 border-b text-[#D09A40]"
+              className="px-6 py-4 border-b text-[#C0A15C] hover:text-[#A2854A] transition-colors"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        {/* Mobile Button */}
-        {/* <div className="p-6">
-          <Link
-            href="#enquire"
-            onClick={() => setIsOpen(true)}
-            className="flex justify-center py-3 bg-[#C0A15C] text-white rounded-md"
-          >
-            Download Brochure
-          </Link>
-        </div> */}
       </div>
     </>
   );

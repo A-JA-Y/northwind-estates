@@ -205,7 +205,7 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNav(e, item.href)}
-                className="px-6 py-4 border-b text-[#D09A40]"
+                className="px-6 py-4 border-b text-[#C0A15C] hover:text-[#A2854A] transition-colors"
               >
                 {item.label}
               </Link>
@@ -218,7 +218,9 @@ const Header = () => {
           <Link
             href="#enquire"
             onClick={() => openModal()}
-            className="flex justify-center py-3 bg-[#C0A15C] text-white rounded-md"
+            className="flex justify-center py-3 bg-[#C0A15C] hover:bg-[#A2854A] text-white rounded-md transition-colors"
+            title="Download the NorthWind Sanctuary brochure"
+            aria-label="Download the NorthWind Sanctuary brochure"
           >
             Download Brochure
           </Link>
