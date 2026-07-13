@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /thank-you
+
+# Host
+Host: https://www.northwindsanctuary.in
+
+# Sitemaps
+Sitemap: https://www.northwindsanctuary.in/sitemap.xml
