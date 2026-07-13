@@ -5,6 +5,7 @@
 import BlogContactForm from "@/components/BlogContactForm";
 import RelatedPosts from "@/components/RelatedPosts";
 import { blogData } from "@/data/blogData";
+import { SITE_URL, project } from "@/data/project";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Script from "next/script";
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 
   const title = blog.metaTitle || blog.title;
   const description = blog.metaDescription || blog.excerpt;
-  const url = `https://godrejgolflink.in/blog/${slug}`;
+  const url = `${SITE_URL}/blogs/${slug}`;
   const imageUrl = typeof blog.image === "string" ? blog.image : "";
 
   return {
@@ -76,7 +77,7 @@ export async function generateMetadata({ params }: { params: Params }) {
       url: blog.canonical || url,
       title,
       description,
-      siteName: "GodrejGolfLink",
+      siteName: project.name,
       locale: "en_IN",
       images: imageUrl
         ? [
@@ -118,7 +119,7 @@ export default async function BlogDetail({ params }: { params: Params }) {
   const BlogContent = await getBlogContent(slug);
   if (!BlogContent) return notFound();
 
-  const pageUrl = `https://godrejgolflink.in/blog/${slug}`;
+  const pageUrl = `${SITE_URL}/blogs/${slug}`;
   const imageUrl = typeof blog.image === "string" ? blog.image : "";
 
   /* ── Breadcrumb Schema ── */
@@ -130,13 +131,13 @@ export default async function BlogDetail({ params }: { params: Params }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://godrejgolflink.in/",
+        item: `${SITE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Blog",
-        item: "https://godrejgolflink.in/blog",
+        name: "Blogs",
+        item: `${SITE_URL}/blogs`,
       },
       {
         "@type": "ListItem",
@@ -153,18 +154,18 @@ export default async function BlogDetail({ params }: { params: Params }) {
     "@type": "Article",
     headline: blog.title,
     description: blog.metaDescription || blog.excerpt,
-    image: imageUrl || undefined,
+    image: imageUrl ? `${SITE_URL}${imageUrl}` : undefined,
     datePublished: blog.date,
     dateModified: blog.updatedAt || blog.date,
     author: blog.author
       ? { "@type": "Person", name: blog.author }
-      : { "@type": "Organization", name: "GodrejGolfLink" },
+      : { "@type": "Organization", name: project.developer },
     publisher: {
       "@type": "Organization",
-      name: "GodrejGolfLink",
+      name: project.developer,
       logo: {
         "@type": "ImageObject",
-        url: "https://godrejgolflink.in/logo.png",
+        url: `${SITE_URL}/northwind-hero.webp`,
       },
     },
     mainEntityOfPage: {

@@ -1,3 +1,5 @@
+import { SITE_URL, project } from "@/data/project";
+
 export type BlogMeta = {
   id: string;
 
@@ -28,498 +30,303 @@ export type BlogMeta = {
   faqSchema?: Record<string, unknown>;
 };
 
+const publisher = {
+  "@type": "Organization",
+  name: project.developer,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/northwind-hero.webp`,
+  },
+};
+
 export const blogData: BlogMeta[] = [
   {
     id: "blog-1",
 
     /* SEO */
-    title: "Godrej Golf Links Greater Noida: Complete Buyer's Guide 2026",
-    slug: "godrej-golf-links-greater-noida-buyers-guide-2026",
+    title:
+      "NorthWind Sanctuary Greater Noida: A Buyer's Guide to Amaltas, Banyan and Cedar",
+    slug: "northwind-sanctuary-greater-noida-buyers-guide",
     excerpt:
-      "Luxury villas, prices, amenities, investment potential and complete guide to Godrej Golf Links Greater Noida.",
+      "Three towers, 185 homes, 4.48 acres and 80% landscape. What actually separates Amaltas, Banyan and Cedar, how to read the area figures on a floor plan, what the seven zones contain — and the questions you should still put to the developer.",
     metaTitle:
-      "Godrej Golf Links Greater Noida Price List 2026 | Villas | Buyer Guide",
+      "NorthWind Sanctuary Greater Noida: Buyer's Guide to Amaltas, Banyan & Cedar",
     metaDescription:
-      "Explore Godrej Golf Links Greater Noida villas, prices, floor plans, amenities, golf course township lifestyle, location advantages and 2026 investment potential in this complete buyer's guide by Godrej Properties.",
+      "A complete buyer's guide to NorthWind Sanctuary, Sector Pi-1 Greater Noida: the three towers compared, carpet vs built-up vs saleable areas, the 47-element master plan, Club Roots, tower-wise specifications and IGBC Pre-Certified Platinum status.",
     keywords: [
-      "Godrej Golf Links",
-      "Godrej Golf Links Greater Noida",
-      "Godrej Golf Links price",
-      "Golf township Noida",
-      "Luxury villas Greater Noida",
+      "NorthWind Sanctuary",
+      "NorthWind Sanctuary Greater Noida",
+      "Amaltas Banyan Cedar",
+      "3 BHK Greater Noida",
+      "4 BHK Greater Noida",
+      "Sector Pi-1 Greater Noida",
+      "Northwind Estates",
+      "luxury apartments Greater Noida",
+      "carpet area vs saleable area",
+      "IGBC Platinum pre-certified",
     ],
-    canonical:
-      "https://www.godrejgolflink.in/blogs/godrej-golf-links-greater-noida-buyers-guide-2026",
+    canonical: `${SITE_URL}/blogs/northwind-sanctuary-greater-noida-buyers-guide`,
 
     /* Display */
     image: "/blog-1.webp",
-    altText: "Luxury modern villa with swimming pool and clubhouse in Bangalore premium residential project",
-    date: "2026-04-25",
-    updatedAt: "2026-04-25",
+    altText:
+      "NorthWind Sanctuary, Sector Pi-1 Greater Noida — the three towers Amaltas, Banyan and Cedar seen across the landscaped central lawn",
+    date: "2026-07-08",
+    updatedAt: "2026-07-08",
     author: "Admin",
-    category: "Real Estate",
+    category: "Buyer's Guide",
     readTime: "12 min read",
-    tags: ["greater noida", "luxury villas", "godrej properties", "investment"],
     featured: true,
+    tags: [
+      "northwind sanctuary",
+      "greater noida",
+      "buyers guide",
+      "floor plans",
+      "carpet area",
+      "luxury apartments",
+      "sector pi-1",
+    ],
 
     /* JSON-LD */
     schemaMarkup: {
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: "Godrej Golf Links Greater Noida Buyer Guide",
+      headline:
+        "NorthWind Sanctuary Greater Noida: A Buyer's Guide to Amaltas, Banyan and Cedar",
+      description:
+        "The three towers of NorthWind Sanctuary compared — Amaltas (4 BHK + Servant, 3,750 sq. ft.), Banyan (4 BHK, 2,431 sq. ft.) and Cedar (3 BHK, 1,895 sq. ft.) — with carpet and built-up areas, the seven amenity zones, Club Roots and the tower-wise specification.",
+      image: [`${SITE_URL}/blog-1.webp`],
+      datePublished: "2026-07-08",
+      dateModified: "2026-07-08",
       author: { "@type": "Person", name: "Admin" },
-      publisher: { "@type": "Organization", name: "Your Company" },
+      publisher,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/blogs/northwind-sanctuary-greater-noida-buyers-guide`,
+      },
+      articleSection: "Real Estate",
+      keywords:
+        "NorthWind Sanctuary, Amaltas, Banyan, Cedar, Sector Pi-1, Greater Noida, carpet area, IGBC Platinum",
+      about: [
+        { "@type": "Residence", name: project.name },
+        { "@type": "Place", name: "Sector Pi-1, Greater Noida" },
+      ],
     },
+
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-
-      "mainEntity": [
+      mainEntity: [
         {
           "@type": "Question",
-          "name": "What is the starting price of Godrej Golf Links villas in 2026?",
-          "acceptedAnswer": {
+          name: "What configurations are available at NorthWind Sanctuary?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Villa prices start at approximately ₹2.70 crore for 4 BHK Evoke configurations. Exquisite and Presidential Villas range from ₹3.30 crore to ₹8 crore depending on size, floor, and golf-facing view. Windsor apartments start from ₹1.20 crore."
-          }
+            text: "Three. Tower A (Amaltas) is a 4 BHK + Servant of 3,750 sq. ft. saleable. Tower B (Banyan) is a 4 BHK of 2,431 sq. ft. saleable. Tower C (Cedar) is a 3 BHK of 1,895 sq. ft. saleable. There are also 5 penthouses and 4 garden villas across the project.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is Godrej Golf Links ready to move in?",
-          "acceptedAnswer": {
+          name: "How many apartments are there in total?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Yes. All villa phases at Godrej Golf Links received possession by March 2024. Apartment phases were handed over from mid-2022. The township is fully occupied and operational today. Buyers can move in immediately without any construction delay risk."
-          }
+            text: "185 homes across three towers — 180 luxury apartments and garden villas plus 5 penthouses. Amaltas has 31 units over 17 floors, Banyan 76 units over 20 floors, and Cedar 78 units over 20 floors.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How far is Godrej Golf Links from the Noida International Airport (Jewar)?",
-          "acceptedAnswer": {
+          name: "What is the carpet area of each apartment?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "The project is approximately 10 km from Jewar International Airport, reachable in about 20 minutes via the Yamuna Expressway. With the airport nearing completion in 2026, this proximity is one of the strongest long-term investment arguments for the project."
-          }
+            text: "Amaltas: 1,956 sq. ft. carpet (2,839 built-up, 705 balcony). Banyan: 1,286 sq. ft. carpet (1,800 built-up, 394 balcony). Cedar: 957 sq. ft. carpet (1,468 built-up, 382 balcony). Always compare carpet with carpet when benchmarking against another project.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Which metro stations are closest to Godrej Golf Links?",
-          "acceptedAnswer": {
+          name: "What is the price of an apartment at NorthWind Sanctuary?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Delta 1 Metro Station on the Aqua Line is approximately 1.5–2.4 km away. Alpha II Metro Station is roughly 2 minutes by car. The Aqua Line connects directly to Noida's Sector 50 and the broader Delhi Metro network."
-          }
+            text: "Pricing is not published in the brochure and is shared on request. Ask for the current rate, the payment plan and all additional charges in writing, quoted against the saleable area of the specific unit you are considering.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How far is Godrej Golf Links from Delhi?",
-          "acceptedAnswer": {
+          name: "What is the RERA registration number?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Central Delhi (Connaught Place) is approximately 50–60 minutes by road via the DND or FNG Expressway under normal traffic conditions. Delhi IGI Airport is approximately 1 hour away."
-          }
+            text: "The RERA registration number is not printed in the brochure. Request it from the developer and verify it independently on the UP RERA portal before making any payment.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does Godrej Golf Links have a 2 BHK option?",
-          "acceptedAnswer": {
+          name: "Which tower has the best specification?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Godrej Golf Links does not offer standard 2 BHK configurations in its main villa or premium apartment clusters. The smallest independent units are the studio and 2 BHK options in The Suites cluster (starting ~722 sq. ft.), followed by 3 BHK and 4 BHK layouts across Windsor, Crest, Evoke, and Exquisite."
-          }
+            text: "Tower A (Amaltas) is the only tower specified with VRV air-conditioning; Towers B and C use split AC. The rest of the palette — imported marble, wooden flooring in bedrooms, quartz-top modular kitchen, Kohler/Roca/Jaquar or equivalent fittings, 2450 mm veneer doors and UPVC windows — is shared across all three.",
+          },
         },
         {
           "@type": "Question",
-          "name": "What is the rental income potential at Godrej Golf Links?",
-          "acceptedAnswer": {
+          name: "Is NorthWind Sanctuary a green building?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "4 BHK villas currently fetch ₹35,000 to ₹70,000 per month in rent, while larger Presidential Villas can command ₹75,000 to ₹1.5 lakh monthly. Windsor apartments typically rent at ₹30,000–₹45,000. Maintenance charges are approximately ₹5,000–₹7,000/month additional."
-          }
+            text: "It is described as one of the first IGBC Pre-Certified Platinum Rated group housing societies in Greater Noida, and 80% of the site is lush green landscape. Pre-certification is awarded on the design; ask the developer what the path to final certification is.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is this a good investment in 2026? What is the expected appreciation?",
-          "acceptedAnswer": {
+          name: "Who is the architect?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Property prices in Pari Chowk / Sector 27 rose 57.5% between 2016 and 2025, with the upward trend continuing into 2026. With the Jewar Airport opening, metro extension to Jewar, and Film City development all progressing, analysts project 10–12% annual appreciation going forward."
-          }
+            text: "Confluence — an award-winning multidisciplinary firm founded in 1999 by Vineeta and Vishal, with more than 25 years of practice and over 200 architects and designers.",
+          },
         },
-        {
-          "@type": "Question",
-          "name": "Where can I download the Godrej Golf Links brochure PDF?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The official brochure with floor plans is available for download at godrejgolflink.in or can be requested via the enquiry form on the website. Authorised channel partners can also provide detailed pricing and layout documents."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are villas at Godrej Golf Links Vaastu-compliant?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The majority of villa configurations at Godrej Golf Links — particularly east-facing units — are designed to be Vaastu-compliant. Buyers should confirm the orientation of their specific unit with the sales team during the site visit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the villa specifications — flooring, kitchen, fittings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Villas feature engineered marble flooring in living areas, wooden flooring in bedrooms and terraces, spacious balconies with glass railings, and private lawns. Fully furnished options include modular kitchens, air conditioning, wardrobes, and appliances. Branded sanitary fittings and designer kitchen options are available in premium clusters."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Godrej Golf Links suitable for elderly parents or senior residents?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. The low-rise, single-level villa layout eliminates staircases as a daily challenge. The internal roads are low-traffic and well-lit. The concierge and facility management team is available 24×7. Kailash and Yatharth hospitals are within 10 minutes, making medical access quick in any emergency. The calm, green environment with golf course walks and landscaped gardens is ideal for daily activity and mental wellbeing for seniors."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What schools are near Godrej Golf Links?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Top schools within reach include Delhi Public School (DPS), Ryan International School, Shiv Nadar School, Genesis International School, Lotus Valley International School, and Amity University. The area is one of Greater Noida's strongest for educational infrastructure."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the maintenance charges at Godrej Golf Links?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Maintenance charges are approximately ₹5,000–₹7,000 per month for villa units, covering facility management, security, landscaping, and common area upkeep. The premium amenities — clubhouse, golf course, pools, gym — are maintained under this arrangement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can NRIs purchase a villa at Godrej Golf Links?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. NRIs can purchase residential property at Godrej Golf Links under existing FEMA regulations. Godrej Properties has an established NRI sales and documentation team. The project's strong rental demand and Godrej brand recognition make it a preferred NRI investment in the NCR."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the RERA registration status?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Godrej Golf Links is a RERA-registered project under Uttar Pradesh RERA. Individual cluster registration numbers (UPRERAPRJ13203, UPRERAPRJ2373, UPRERAPRJ151, UPRERAPRJ2126) are available on the official website and can be verified at the UP RERA portal."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I book a site visit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Site visits can be booked directly through the enquiry form at godrejgolflink.in. An authorised sales representative will schedule a personalised walkthrough of the golf course, clubhouse, and available villa units based on your preferred timing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the developer's track record?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Godrej Properties was established in 1990 as the real estate arm of the 127-year-old Godrej Group. It is India's first ISO-certified real estate company, has won over 400 industry awards, operates across 12 cities, and has 92 live and upcoming projects covering 200 million sq. ft. Its on-time delivery record and quality consistency make it one of the most trusted developers in India."
-          }
-        }
-      ]
-
-    }
+      ],
+    },
   },
+
   {
-    id: "jewar-airport-godrej-golf-links-greater-noida-2026",
+    id: "blog-2",
 
     /* SEO */
     title:
-      "The Window Is Closing: How Jewar Airport Is Turning Godrej Golf Links Greater Noida Into NCR's Hottest Investment of 2026",
-
-    slug:
-      "jewar-airport-godrej-golf-links-greater-noida-smart-investment-2026",
-
+      "Sector Pi-1, Greater Noida: A Connectivity Guide to NorthWind Sanctuary's Address",
+    slug: "sector-pi-1-greater-noida-connectivity-guide",
     excerpt:
-      "Discover why Jewar Airport is transforming Godrej Golf Links Greater Noida into one of NCR's strongest real estate investment opportunities of 2026, with rising property values, infrastructure growth, luxury villas, and long-term appreciation potential.",
-
+      "Metro at 2 km. Pari Chowk and Fortis at 5. School at 8. Noida International Airport and Delhi at 30. What those six numbers mean for a weekday — and the expressway grid, universities and commercial belt around them.",
     metaTitle:
-      "Jewar Airport & Godrej Golf Links Greater Noida: Best Investment of 2026",
-
+      "Sector Pi-1 Greater Noida Connectivity Guide | NorthWind Sanctuary Location",
     metaDescription:
-      "Jewar Airport is boosting Godrej Golf Links Greater Noida property values. Explore villa prices, rental yields & why 2026 is the best time to invest.",
-
+      "How well connected is Sector Pi-1, Greater Noida? GNIDA Metro 2 km, Pari Chowk 5 km, Fortis Hospital 5 km, Delhi Public School 8 km, Noida International Airport and Delhi 30 km — plus the expressway grid, Sharda and Bennett universities and the Alpha commercial belt.",
     keywords: [
-      "Godrej Golf Links Greater Noida",
-      "Godrej Golf Links",
-      "Godrej Properties Greater Noida",
-      "Godrej Greater Noida",
-      "Godrej Villas Greater Noida",
-      "Godrej Golf Links Villas Price",
-      "Godrej Golf Links Brochure PDF",
-      "Godrej Golf Links Greater Noida Villa",
-      "Godrej Golf Links Price",
-      "Godrej Golf Links Contact Number",
-      "Jewar Airport property investment",
-      "Noida International Airport real estate",
-      "Yamuna Expressway property prices",
-      "Greater Noida luxury villas",
-      "Greater Noida investment guide 2026",
-      "Godrej luxury township",
-      "Golf course villas Greater Noida",
-      "Jewar Airport impact on real estate",
-      "Ready to move villas Greater Noida",
-      "NCR real estate investment 2026"
+      "Sector Pi-1 Greater Noida",
+      "NorthWind Sanctuary location",
+      "Greater Noida connectivity",
+      "GNIDA Metro Station",
+      "Pari Chowk",
+      "Noida International Airport",
+      "Yamuna Expressway",
+      "Noida Greater Noida Link Road",
+      "Sharda University",
+      "Bennett University",
     ],
-
-    canonical:
-      "https://www.godrejgolflink.in/blogs/jewar-airport-godrej-golf-links-greater-noida-smart-investment-2026",
-
-    altText:
-      "Luxury villas at Godrej Golf Links Greater Noida near Jewar Airport with golf course and modern township infrastructure",
+    canonical: `${SITE_URL}/blogs/sector-pi-1-greater-noida-connectivity-guide`,
 
     /* Display */
     image: "/blog-2.webp",
-
-    date: "2026-05-13",
-    updatedAt: "2026-05-13",
-
+    altText:
+      "Aerial view of NorthWind Sanctuary in Sector Pi-1, Greater Noida, with the surrounding road network and green belt",
+    date: "2026-07-10",
+    updatedAt: "2026-07-10",
     author: "Admin",
-
-    category: "Real Estate Investment",
-
-    readTime: "12 min read",
-
+    category: "Location Guide",
+    readTime: "10 min read",
+    featured: false,
     tags: [
-      "Greater Noida",
-      "Jewar Airport",
-      "Godrej Golf Links",
-      "Luxury Villas",
-      "Real Estate",
-      "Property Investment",
-      "Yamuna Expressway",
-      "Godrej Properties",
-      "Golf Township",
-      "NCR Real Estate",
-      "2026 Investment Guide"
+      "sector pi-1",
+      "greater noida",
+      "connectivity",
+      "location guide",
+      "metro",
+      "noida international airport",
+      "northwind sanctuary",
     ],
-
-    featured: true,
 
     /* JSON-LD */
-   schemaMarkup:[
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline":
-      "The Window Is Closing: How Jewar Airport Is Turning Godrej Golf Links Greater Noida Into NCR's Hottest Investment of 2026",
-    "description":
-      "Discover why Jewar Airport is turning Godrej Golf Links Greater Noida into the NCR's most compelling real estate investment of 2026. Explore villa prices, appreciation forecasts, infrastructure growth, rental income potential, and expert market insights.",
-    "image": "https://www.godrejgolflink.in/blog-2.webp",
-    "author": {
-      "@type": "Person",
-      "name": "Admin"
+    schemaMarkup: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline:
+        "Sector Pi-1, Greater Noida: A Connectivity Guide to NorthWind Sanctuary's Address",
+      description:
+        "The six published distances from NorthWind Sanctuary, Sector Pi-1 Greater Noida — GNIDA Metro 02 km, Pari Chowk 05 km, Fortis Hospital 05 km, Delhi Public School 08 km, Noida International Airport 30 km and Delhi 30 km — and the expressway grid, universities and commercial belt around the site.",
+      image: [`${SITE_URL}/blog-2.webp`],
+      datePublished: "2026-07-10",
+      dateModified: "2026-07-10",
+      author: { "@type": "Person", name: "Admin" },
+      publisher,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/blogs/sector-pi-1-greater-noida-connectivity-guide`,
+      },
+      articleSection: "Real Estate",
+      keywords:
+        "Sector Pi-1, Greater Noida, connectivity, GNIDA Metro, Pari Chowk, Noida International Airport, Yamuna Expressway",
+      about: [
+        { "@type": "Place", name: "Sector Pi-1, Greater Noida" },
+        { "@type": "Residence", name: project.name },
+      ],
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "GodrejGolfLink",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.godrejgolflink.in/blog-2.webp"
-      }
-    },
-    "datePublished": "2026-05-13",
-    "dateModified": "2026-05-13",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id":
-        "https://godrejgolflink.in/news/jewar-airport-godrej-golf-links-greater-noida-smart-investment-2026"
-    },
-    "articleSection": "Real Estate Investment",
-    "keywords":
-      "Godrej Golf Links Greater Noida, Jewar Airport property investment, Noida International Airport real estate, Yamuna Expressway property prices, Greater Noida luxury villas, NCR real estate investment 2026",
-    "inLanguage": "en-IN",
-    "timeRequired": "PT12M"
-  },
 
-  {
-    "@context": "https://schema.org",
-    "@type": "Residence",
-    "name": "Godrej Golf Links Greater Noida",
-    "description":
-      "A 100-acre integrated golf township in Sector 27, Greater Noida featuring luxury villas, golf course living, premium clubhouses, and world-class amenities near Jewar Airport.",
-    "url": "https://www.godrejgolflink.in/",
-    "image": [
-      "https://www.godrejgolflink.in/blog-2.webp"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Sector 27",
-      "addressLocality": "Greater Noida",
-      "addressRegion": "Uttar Pradesh",
-      "postalCode": "201310",
-      "addressCountry": "IN"
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Where exactly is NorthWind Sanctuary located?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Plot 07, Sector Pi-1, Greater Noida, Uttar Pradesh 201306 — in Greater Noida's planned residential belt, close to Pari Chowk and the Sector 34 and Sector Pi neighbourhoods.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far is the nearest metro station?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "GNIDA Metro Station is 02 km away, about a 5-minute drive.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far is Noida International Airport from NorthWind Sanctuary?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Approximately 30 km, about a 30-minute drive under normal conditions.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How far is Delhi?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Approximately 30 km, about a 30-minute drive, via the expressway network serving Greater Noida.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which hospital is closest?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Fortis Hospital is 05 km away, roughly 7 minutes by road.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are there good schools nearby?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Delhi Public School is 08 km away, about a 10-minute drive. Sharda University, Bennett University and the Knowledge Park institutional cluster are also in the surrounding catchment.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which expressways serve Sector Pi-1?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The location map shows the Noida–Greater Noida Link Road, the Noida Expressway, the Yamuna Expressway and the Eastern Peripheral Expressway — a road grid that separates local, regional and long-distance traffic.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are these distances guaranteed?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. The developer's own caption reads: 'Map not to scale. Approximate Distance & Time.' They are indicative drive distances and times under normal conditions — drive the routes yourself at the hours you will actually use them.",
+          },
+        },
+      ],
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 28.4744,
-      "longitude": 77.5040
-    },
-    "amenityFeature": [
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "9-Hole Golf Course",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "55,000 sq. ft. Clubhouse",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Swimming Pools",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Warren Tricomi Spa",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Drive-in Cinema",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Holyfield Gymnasium",
-        "value": true
-      }
-    ],
-    "numberOfRooms": "4",
-    "petsAllowed": true
-  }
-],
-    faqSchema:{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Has Jewar Airport actually opened, or is it still a future project?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Noida International Airport at Jewar was inaugurated on 28 March 2026 by Prime Minister Narendra Modi. Commercial flight operations begin on 15 June 2026 with IndiGo, followed by Akasa Air and Air India Express. Phase 1 can handle 12 million passengers annually."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How far is Godrej Golf Links from Jewar Airport exactly?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Godrej Golf Links Greater Noida is located in Sector 27, approximately 10 km from Jewar International Airport. The drive via the Yamuna Expressway takes around 20 minutes under normal traffic conditions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much have property prices already risen near Jewar Airport?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "According to ANAROCK research, Greater Noida property prices surged 98% between Q1 2020 and Q1 2025. Properties along the Yamuna Expressway corridor appreciated 40–60% in anticipation of the airport opening. Square Yards projects a further 28% rise in plot values and 22% in apartment values over the next two years."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the current Godrej Golf Links price per sq. ft. in 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The average resale rate at Godrej Golf Links Greater Noida is ₹12,800/sq. ft. Villa prices range from ₹2.70 Crore (4 BHK Evoke) to ₹8 Crore (Presidential), and apartments from ₹1.20 Crore upwards."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Godrej Golf Links ready to move in, or is it under construction?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The project is fully ready to move in. Villa handovers were completed by March 2024 and apartment phases from mid-2022. The township is operational today — residents are living there, amenities are functioning, and no construction risk exists for new buyers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will property prices continue to rise after the airport starts flights?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Market analysts project an additional 20–30% appreciation along the Yamuna Expressway corridor once commercial flights begin in June 2026. Longer-term (2027–2028), estimates range to 40–59% additional appreciation as the aerotropolis ecosystem develops."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What makes Godrej Golf Links better than other projects near Jewar Airport?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Three differentiators: (1) Godrej brand premium — resale values command 8–12% above comparable rates; (2) Unique township product — a 100-acre golf township with world-class branded amenities; (3) Ready-to-move status — zero construction risk, immediate rental income, and lifestyle benefits."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can NRIs invest in Godrej Golf Links Greater Noida?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. NRI purchase of residential property at Godrej Golf Links is permitted under FEMA regulations. Godrej Properties has a dedicated NRI documentation and sales team. Strong rental demand and brand recognition make it a preferred NRI investment in NCR."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I download the Godrej Golf Links brochure PDF?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visit the official website at godrejgolflink.in and submit an enquiry. The complete brochure PDF — including floor plans, specifications, and pricing — will be shared via email or WhatsApp. Authorised channel partners can also provide it instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the Godrej Golf Links contact number for enquiries?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The official contact and callback request is available on godrejgolflink.in. For site visit bookings, brochure PDFs, and current pricing — submit your details on the website and the official sales team will respond promptly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What amenities does Godrej Golf Links Greater Noida offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The township features a 9-hole golf course, a 55,000 sq. ft. clubhouse across 4 blocks, Warren Tricomi spa & salon, Holyfield gymnasium, 5 swimming pools (including Olympic-size and heated indoor pools), drive-in cinema, squash courts, tennis, high-street retail, eco-friendly infrastructure, and 24×7 multi-layer security."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the RERA registration status of Godrej Golf Links?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The project is fully RERA-registered under UP RERA. Registration numbers include UPRERAPRJ13203, UPRERAPRJ2373, UPRERAPRJ151, and UPRERAPRJ2126 — all verifiable on the official UP RERA portal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What rental income can I earn from a Godrej Golf Links villa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Current rental ranges: 4 BHK Evoke Villa — ₹35,000 to ₹70,000/month; Presidential Villa — ₹75,000 to ₹1.5 Lakh/month; Windsor Apartment — ₹30,000 to ₹45,000/month; Studio Suites — ₹15,000 to ₹25,000/month."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are the villas at Godrej Golf Links Vaastu-compliant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The majority of villa configurations — particularly east-facing units — are designed to be Vaastu-compliant. Confirm the specific orientation of your chosen unit with the sales team during the site visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What schools and hospitals are near Godrej Golf Links Greater Noida?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Top schools: Delhi Public School, Ryan International, Shiv Nadar, Genesis International, Lotus Valley, and Amity University. Major hospitals: Yatharth Super Speciality and Kailash (within 10 minutes), plus Sharda, Jaypee, and Max hospitals."
-      }
-    }
-  ]
-}
- 
   },
 ];
