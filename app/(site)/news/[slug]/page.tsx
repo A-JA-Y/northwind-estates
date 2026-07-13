@@ -1,6 +1,7 @@
 import BlogContactForm from "@/components/BlogContactForm";
 import RelatedPosts from "@/components/RelatedPosts";
 import NewsData from "@/data/newsData";
+import { SITE_URL, project } from "@/data/project";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Script from "next/script";
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 
   const title = news.metaTitle || news.title;
   const description = news.metaDescription || news.excerpt;
-  const url = `https://godrejgolflink.in/news/${slug}`;
+  const url = `${SITE_URL}/news/${slug}`;
   const imageUrl = typeof news.image === "string" ? news.image : "";
 
   return {
@@ -70,7 +71,7 @@ export async function generateMetadata({ params }: { params: Params }) {
       url: news.canonical || url,
       title,
       description,
-      siteName: "Godrej Golf Links",
+      siteName: project.name,
       locale: "en_IN",
       images: imageUrl
         ? [
@@ -113,8 +114,9 @@ export default async function NewsDetail({ params }: { params: Params }) {
   // If MDX content is not found, we can still show metadata but body will be empty or we can use fallback
   // For now, let's treat missing MDX as notFound if that's the intended way
 
-  const pageUrl = `https://godrejgolflink.in/news/${slug}`;
+  const pageUrl = `${SITE_URL}/news/${slug}`;
   const imageUrl = typeof news.image === "string" ? news.image : "";
+  const absoluteImageUrl = imageUrl ? `${SITE_URL}${imageUrl}` : "";
 
   /* ── Breadcrumb Schema ── */
   const breadcrumbSchema = {
@@ -125,13 +127,13 @@ export default async function NewsDetail({ params }: { params: Params }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://godrejgolflink.in/",
+        item: `${SITE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "News",
-        item: "https://godrejgolflink.in/news",
+        item: `${SITE_URL}/news`,
       },
       {
         "@type": "ListItem",
@@ -148,18 +150,18 @@ export default async function NewsDetail({ params }: { params: Params }) {
     "@type": "NewsArticle",
     headline: news.title,
     description: news.metaDescription || news.excerpt,
-    image: imageUrl || undefined,
+    image: absoluteImageUrl || undefined,
     datePublished: news.date,
     dateModified: news.updatedAt || news.date,
     author: news.author
       ? { "@type": "Person", name: news.author }
-      : { "@type": "Organization", name: "Godrej Golf Links" },
+      : { "@type": "Organization", name: project.developer },
     publisher: {
       "@type": "Organization",
-      name: "Godrej Golf Links",
+      name: project.developer,
       logo: {
         "@type": "ImageObject",
-        url: "https://godrejgolflink.in/logo.png",
+        url: `${SITE_URL}/northwind-hero.webp`,
       },
     },
     mainEntityOfPage: {

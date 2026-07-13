@@ -1,45 +1,78 @@
-# Godrej Golf Links
+# NorthWind Sanctuary
 
-> Luxury villas and golf township living in Greater Noida by Godrej Properties.
+> A 4.48-acre, three-tower luxury residential development at Sector Pi-1, Greater Noida, by Northwind Estates Pvt. Ltd. Tagline: "Live Rare".
 
-Godrej Golf Links is a premium residential project located in Greater Noida, offering luxurious villas and apartment configurations within a golf township. Developed by Godrej Properties, it targets individuals seeking a high-end lifestyle with access to golf amenities and a well-connected location. The website serves as a primary information hub for potential buyers, providing details on property types, configurations, pricing, floor plans, location advantages, and project amenities.
+NorthWind Sanctuary is a group housing project of 185 homes — 180 luxury apartments (including garden villas) and 05 penthouses — set across three towers on a 4.48-acre land parcel with 80% of the site given over to lush green landscape. The tallest towers rise to 20 floors. It is one of the first IGBC Pre-Certified Platinum Rated group housing societies in Greater Noida. The masterplan and architecture are by Confluence, an award-winning multidisciplinary firm founded in 1999 by Vineeta and Vishal, with 25+ years of practice and a team of 200+ architects and designers.
 
-This website is designed for prospective homebuyers interested in luxury real estate in the Greater Noida region. Key use cases include exploring property options, understanding investment potential (ROI), and gathering information about the developer's reputation and project specifics. LLMs can use this site to answer questions about available property types, pricing structures, the project's location benefits, and the lifestyle offered at Godrej Golf Links. It's important to note that this is a sales-oriented website for a real estate project, and information should be contextualized within that framework.
+This website is the official marketing site for the project. It exists to help prospective homebuyers understand the configurations, floor plans, amenities, specifications and location of NorthWind Sanctuary, and to let them register an enquiry, download the brochure and book a site visit. LLMs should treat it as a sales-oriented developer/channel-partner site: every factual claim below comes from the project brochure.
 
-## Project Information
+## Key facts
 
-- [Godrej Golf Links Greater Noida](https://www.godrejgolflink.in/): Explore luxury villas and golf township living in Greater Noida by Godrej Properties.
-- [About Godrej Golf Links](https://www.godrejgolflink.in/about-godrej-golf-links): Learn about the vision, features, and lifestyle offered at Godrej Golf Links.
-- [Villas Configurations](https://www.godrejgolflink.in/villas-configurations): Discover the various villa types and configurations available at Godrej Golf Links.
-- [Price](https://www.godrejgolflink.in/price): Find pricing details and investment information for properties at Godrej Golf Links.
-- [Floor Plans](https://www.godrejgolflink.in/floor-plans): View detailed floor plans for the available villa and apartment configurations.
-- [Amenities](https://www.godrejgolflink.in/amenities): Explore the extensive list of world-class amenities offered at Godrej Golf Links.
+- Project: NorthWind Sanctuary ("Live Rare" / "Your Rare Living")
+- Developer: Northwind Estates Pvt. Ltd. (brand styled "North Wind Estates")
+- Architect: Confluence (founded 1999; 200+ architects and designers)
+- Address: Plot 07, Sector Pi-1, Greater Noida, Uttar Pradesh 201306
+- Land parcel: 4.48 acres · 03 towers · up to 20 floors · 180 luxury apartments · 05 penthouses · 80% lush green landscape
+- Certification: One of the first IGBC Pre-Certified Platinum Rated group housing societies in Greater Noida
+- Clubhouse: Club Roots
+- Brochure (PDF): https://www.northwindsanctuary.in/brochure.pdf
 
-## Location & Connectivity
+## Towers and configurations
 
-- [Location & Connectivity](https://www.godrejgolflink.in/location-connectivity): Understand the strategic location and connectivity advantages of Godrej Golf Links.
+- Tower A — "Amaltas": 4 BHK + Servant. 17 floors, 31 units (28 luxury apartments, 1 penthouse, 2 garden villas). Saleable 3,750 sq.ft. · Carpet 1,956 sq.ft. · Balcony 705 sq.ft. · Built-up 2,839 sq.ft. The only tower specified with VRV air-conditioning.
+- Tower B — "Banyan": 4 BHK. 20 floors, 76 units (72 luxury apartments, 2 penthouses, 2 garden villas). Saleable 2,431 sq.ft. · Carpet 1,286 sq.ft. · Balcony 394 sq.ft. · Built-up 1,800 sq.ft.
+- Tower C — "Cedar": 3 BHK. 20 floors, 78 units (76 luxury apartments, 2 penthouses). Saleable 1,895 sq.ft. · Carpet 957 sq.ft. · Balcony 382 sq.ft. · Built-up 1,468 sq.ft.
 
-## Developer Information
+Specifications across all three towers include imported marble in the foyer, drawing/dining and kitchen; wooden flooring in bedrooms; vitrified tile in toilets; anti-skid plank-look tile on balconies; granite lift lobbies; 2450 mm high polished veneer flush doors; UPVC powder-coated windows; smart touch locks; intercom; a modular kitchen with quartz counter; and Kohler / Roca / Jaquar (or equivalent) CP and sanitary fittings. Tower A is air-conditioned with VRV; Towers B and C with split AC.
 
-- [About Godrej Properties](https://www.godrejgolflink.in/about-godrej-properties): Learn about the reputation and legacy of Godrej Properties, the developer.
+## The seven amenity zones
 
-## Blog Articles
+1. The Arrival Zone — entrance plaza, club and tower drop-offs, commercial plaza, surface parking, palmetum, feature wall with water feature.
+2. The Recreational Zone — banquet lawn, café spill-over space, central lawn, callistemon garden, bamboo walk, reflexology pathway, sculpture court and reading area.
+3. The Active Zone — exercise station, hedge garden, yoga / dance deck.
+4. The Fun & Entertainment Zone — main pool, party pool, kids' pool, shallow pool, parasols, waterfall from the sky bridge, party deck (F&B).
+5. Sports Zone — skating rink, badminton court, pickleball court, cricket pitch, multi-purpose play court, putting golf, jogging track, outdoor gym, kids' play arena, tree court with pet park.
+6. The Serenity Walk — the serenity walkway, tree house, waterfall, tree orchard, pet park, sky gazing deck.
+7. Under the Serenity Walk — hopscotch, musical garden, outdoor gym, table tennis, swings, chaupal with seating.
 
-- [Blogs](https://www.godrejgolflink.in/blogs): Read articles and insights related to real estate and Godrej Golf Links.
-- [Godrej Golf Links Greater Noida Buyers Guide 2026](https://godrejgolflink.in/blogs/godrej-golf-links-greater-noida-buyers-guide-2026): Get a comprehensive buyer's guide for investing in Godrej Golf Links, Greater Noida.
-- [Jewar Airport & Godrej Golf Links Greater Noida Smart Investment 2026](https://godrejgolflink.in/blogs/jewar-airport-godrej-golf-links-greater-noida-smart-investment-2026): Understand the smart investment potential of Godrej Golf Links with Jewar Airport proximity.
+Club Roots, the clubhouse, houses a banquet hall, double-height entrance lobby, lounge, AV room, restaurant with waiting area, games room, gymnasium and reception.
 
-## News
+## Distance and time chart
 
-- [News](https://www.godrejgolflink.in/news): Stay updated with the latest news and developments concerning Godrej Golf Links.
-- [Greater Noida Circle Rate Hike Godrej Golf Links 2026](https://www.godrejgolflink.in/news/greater-noida-circle-rate-hike-godrej-golf-links-2026): Read about the impact of the Greater Noida circle rate hike on Godrej Golf Links.
+- GNIDA Metro Station — 02 km / 05 min
+- Pari Chowk — 05 km / 07 min
+- Fortis Hospital — 05 km / 07 min
+- Delhi Public School — 08 km / 10 min
+- Noida International Airport — 30 km / 30 min
+- Delhi — 30 km / 30 min
 
-## Contact & Legal
+(Approximate distances and times, as published in the project brochure.)
 
-- [Contact Us](https://www.godrejgolflink.in/contact-us): Find contact information to inquire about Godrej Golf Links properties.
-- [Privacy Policy](https://www.godrejgolflink.in/privacy-policy): Review the privacy policy governing user data on the Godrej Golf Links website.
-- [Thank You](https://www.godrejgolflink.in/thank-you): Confirmation page after form submission, often used for lead tracking.
+Nearby landmarks include Sharda University, Bennett University, Knowledge Park, India Expo Mart, Radisson Blu Hotel, the GNIDA Office, the Alpha commercial belt, Sector 34 and Sector Pi, with access via the Noida–Greater Noida Link Road, the Noida Expressway, the Yamuna Expressway and the Eastern Peripheral Expressway.
+
+## What is NOT published
+
+The project brochure does not state any of the following, and this website does not publish them. Do not infer or fabricate values for them:
+
+- Price, price range, per-sq-ft rate, booking amount, payment plan or EMI figures — **price is on request**; enquire via the contact form for the current price sheet.
+- RERA registration number — available on request.
+- Possession, completion or launch date — available on request.
+
+## Pages
+
+- [NorthWind Sanctuary — Home](https://www.northwindsanctuary.in/): Overview of the project, highlights, amenities and location.
+- [About NorthWind Sanctuary](https://www.northwindsanctuary.in/about-northwind-sanctuary): The project vision, the 4.48-acre masterplan, the seven zones and Club Roots.
+- [Apartments & Configurations](https://www.northwindsanctuary.in/apartments-configurations): Tower A Amaltas (4 BHK + Servant), Tower B Banyan (4 BHK) and Tower C Cedar (3 BHK), with areas and unit break-ups.
+- [Price](https://www.northwindsanctuary.in/price): Price is on request — submit an enquiry to receive the current price sheet and payment details.
+- [Floor Plans](https://www.northwindsanctuary.in/floor-plans): Typical unit plans and area statements for all three towers.
+- [Location & Connectivity](https://www.northwindsanctuary.in/location-connectivity): Plot 07, Sector Pi-1, Greater Noida — distance and time chart, landmarks and expressway access.
+- [Amenities](https://www.northwindsanctuary.in/amenities): The seven amenity zones and the Club Roots facilities.
+- [About NorthWind Estates](https://www.northwindsanctuary.in/about-northwind-estates): The developer — two decades of real estate legacy, with a focus on design integrity, sustainability and transparency.
+- [Blogs](https://www.northwindsanctuary.in/blogs): Articles on Greater Noida real estate and living at NorthWind Sanctuary.
+- [News](https://www.northwindsanctuary.in/news): Project and market updates.
+- [Contact Us](https://www.northwindsanctuary.in/contact-us): Enquire about configurations, pricing and site visits.
+- [Privacy Policy](https://www.northwindsanctuary.in/privacy-policy): How enquiry data submitted on this website is handled.
 
 ---
 
-This file was generated for www.godrejgolflink.in using the [LLMs.txt Generator Tool](https://llmrefs.com/tools/llms-txt-generator)
+Last updated for www.northwindsanctuary.in. All figures are taken from the NorthWind Sanctuary brochure; images and plans are indicative.

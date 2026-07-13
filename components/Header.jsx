@@ -51,10 +51,12 @@ const Header = () => {
             href="#overview"
             onClick={(e) => handleNav(e, "#overview")}
             className="flex-shrink-0"
+            aria-label="NorthWind Sanctuary — back to top"
+            title="NorthWind Sanctuary"
           >
             <Image
               src={logo150}
-              alt="Gaur Aero Suites"
+              alt="NorthWind Sanctuary by NorthWind Estates"
               className="h-14 w-auto object-contain"
               sizes="(max-width: 768px) 80px, 80px"
               style={{ width: "67px", height: "auto" }}
@@ -74,7 +76,7 @@ const Header = () => {
                 >
                   {/* Parent */}
                   <div
-                    className="flex items-center gap-2 cursor-pointer text-[#D09A40]"
+                    className="flex items-center gap-2 cursor-pointer text-[#C0A15C] hover:text-[#A2854A] transition-colors"
                     onClick={() =>
                       setActiveMenu((prev) =>
                         prev === item.label ? null : item.label
@@ -101,7 +103,7 @@ const Header = () => {
                           key={child.label}
                           href={child.href}
                           onClick={(e) => handleNav(e, child.href)}
-                          className="block px-4 py-2 text-[#D09A40] hover:text-[#C0A15C] whitespace-nowrap"
+                          className="block px-4 py-2 text-[#C0A15C] hover:text-[#A2854A] whitespace-nowrap transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -114,7 +116,7 @@ const Header = () => {
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNav(e, item.href)}
-                  className="text-[#D09A40]"
+                  className="text-[#C0A15C] hover:text-[#A2854A] transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -127,13 +129,17 @@ const Header = () => {
             href="#enquire"
             onClick={() => openModal()}
             className="hidden lg:inline-flex items-center justify-center px-[32px] py-[16px] text-white rounded-md"
-            style={{ backgroundColor: "#C0A15C" }}
+            style={{ backgroundColor: GOLD }}
+            title="Download the NorthWind Sanctuary brochure"
+            aria-label="Download the NorthWind Sanctuary brochure"
           >
             Download Brochure
           </Link>
 
           {/* Mobile Hamburger */}
           <button
+            type="button"
+            aria-label="Open menu"
             className="lg:hidden flex items-center justify-center w-10 h-10 rounded-sm"
             style={{ backgroundColor: GOLD }}
             onClick={() => setOpen(true)}
@@ -144,7 +150,7 @@ const Header = () => {
               (e.currentTarget.style.backgroundColor = GOLD)
             }
           >
-            <svg width="20" height="14" viewBox="0 0 20 14">
+            <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">
               <line x1="0" y1="1" x2="20" y2="1" stroke="white" strokeWidth="2" />
               <line x1="0" y1="7" x2="20" y2="7" stroke="white" strokeWidth="2" />
               <line x1="0" y1="13" x2="20" y2="13" stroke="white" strokeWidth="2" />
@@ -165,7 +171,13 @@ const Header = () => {
       >
         {/* Close */}
         <div className="flex justify-end p-4 border-b">
-          <button onClick={() => setOpen(false)}>✕</button>
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            ✕
+          </button>
         </div>
 
         {/* Mobile Nav */}
@@ -173,7 +185,7 @@ const Header = () => {
           {menuItems.map((item, index) =>
             item.children ? (
               <details key={index} className="border-b">
-                <summary className="px-6 py-4 flex justify-between items-center text-[#D09A40]">
+                <summary className="px-6 py-4 flex justify-between items-center text-[#C0A15C]">
                   {item.label}
                   <FaChevronDown size={12} />
                 </summary>
@@ -182,7 +194,7 @@ const Header = () => {
                     key={child.label}
                     href={child.href}
                     onClick={(e) => handleNav(e, child.href)}
-                    className="block px-10 py-2 text-[#D09A40]"
+                    className="block px-10 py-2 text-[#C0A15C] hover:text-[#A2854A] transition-colors"
                   >
                     {child.label}
                   </Link>
