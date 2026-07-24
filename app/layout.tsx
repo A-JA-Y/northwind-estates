@@ -94,6 +94,9 @@ export const metadata: Metadata = {
 };
 
 import { ModalProvider } from "@/components/ModalContext";
+import ModalWrapper from "@/components/ModalWrapper";
+import MobileCtaBar from "@/components/MobileCtaBar";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function RootLayout({
   children,
@@ -132,7 +135,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <ModalProvider>
           {children}
+          <ModalWrapper />
+          <MobileCtaBar />
         </ModalProvider>
+        <ScrollReveal />
       </body>
     </html>
   );

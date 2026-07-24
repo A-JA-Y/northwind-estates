@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import ReraStrip from "@/components/QRsectionsm";
 import ContactForm from "@/components/ContactForm";
-import ModalWrapper from "@/components/ModalWrapper";
 import HomePageHeader from "@/components/HomePageHeader";
 import { SITE_URL, project, contact } from "@/data/project";
 
@@ -172,13 +171,12 @@ export default function Home() {
       <ReraStrip />
 
       <main className="w-full">
-        <section className="md:px-[30px] md:py-[45px] md:relative top-[-98px]">
-          <div className="md:block max-w-5xl m-auto">
+        <section className="px-4 py-6 md:px-[30px] md:py-[45px]">
+          <div className="max-w-5xl m-auto">
             <ContactForm />
           </div>
         </section>
 
-        <ModalWrapper />
 
         <AboutProject  heading={false}/>
         <Amenities />

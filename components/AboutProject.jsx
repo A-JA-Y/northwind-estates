@@ -7,9 +7,12 @@ import mainEntrance from "../assets/main-entrance.webp";
 import poolSerenity from "../assets/pool-serenity-walk.webp";
 import clubLounge from "../assets/club-lounge.webp";
 import openAmphitheatre from "../assets/open-amphitheatre.webp";
+import livingLounge from "../assets/living-lounge.webp";
+import masterBedroom from "../assets/master-bedroom.webp";
 
 import { useModal } from "./ModalContext";
 import { highlights } from "@/data/project";
+import CountUp from "./CountUp";
 
 const AboutProject = ({ heading }) => {
   const { openModal } = useModal();
@@ -22,11 +25,13 @@ const AboutProject = ({ heading }) => {
     >
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 center-box">
         {/* Left: Images */}
-        <div className="hidden md:flex flex-col items-start relative w-full md:w-1/2 h-[500px]">
+        <div className="flex flex-col items-start relative w-full md:w-1/2 h-[280px] md:h-[500px]">
           <ImageSlider
             images={[
               aerialTowers,
+              livingLounge,
               mainEntrance,
+              masterBedroom,
               poolSerenity,
               clubLounge,
               openAmphitheatre,
@@ -69,8 +74,8 @@ const AboutProject = ({ heading }) => {
           <dl className="grid grid-cols-3 gap-3 mt-2">
             {highlights.map((h) => (
               <div key={h.label} className="border-t-2 border-[#C0A15C] pt-2">
-                <dt className="text-xl font-bold text-[#0B3B2C] leading-none">
-                  {h.value}
+                <dt className="text-xl font-bold text-[#0B3B2C] leading-none tabular-nums">
+                  <CountUp value={h.value} />
                   {h.unit ? (
                     <span className="text-[11px] font-semibold ml-1 text-[#7C8B80]">
                       {h.unit}
@@ -106,7 +111,7 @@ const AboutProject = ({ heading }) => {
           <div className="mt-4">
             <button
               onClick={() => openModal()}
-              className="inline-block bg-[#C0A15C] text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 hover:bg-[#A2854A] transition-colors duration-300 cursor-pointer"
+              className="cta-shine inline-block bg-[#C0A15C] text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 hover:bg-[#A2854A] hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               Download Brochure
             </button>

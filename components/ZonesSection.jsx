@@ -39,11 +39,11 @@ export default function ZonesSection() {
           Serenity Walk. Eighty percent of the site stays green.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 -mx-4 px-4 pb-2 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:mx-0 sm:px-0 sm:pb-0 sm:overflow-visible">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="relative h-56 rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition"
+              className="relative h-56 rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition shrink-0 w-[80%] snap-center sm:w-auto sm:shrink"
             >
               <Image
                 src={card.image}
@@ -54,9 +54,9 @@ export default function ZonesSection() {
                 quality={80}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08251C]/85 via-[#08251C]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#08251C]/85 via-[#08251C]/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="absolute bottom-0 p-4">
+              <div className="absolute bottom-0 p-4 transition-transform duration-500 ease-out group-hover:-translate-y-1.5">
                 <p className="text-white text-sm font-semibold leading-snug">
                   {card.title}
                 </p>

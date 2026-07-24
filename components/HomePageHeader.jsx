@@ -54,7 +54,7 @@ export default function HomePageHeader() {
                   className={`relative text-[13px] font-bold px-3 py-1.5 whitespace-nowrap tracking-widest uppercase transition-colors
                     ${isActive(item.href)
                       ? "text-[#C0A15C] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-[#C0A15C] after:rounded-full"
-                      : "text-[#555] hover:text-[#C0A15C]"
+                      : "text-[#555] hover:text-[#C0A15C] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-[#C0A15C] after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                     }`}
                 >
                   {item.label}
@@ -70,7 +70,7 @@ export default function HomePageHeader() {
                   className={`relative text-[13px] font-bold px-3 py-1.5 whitespace-nowrap tracking-widest uppercase transition-colors
                     ${isActive(item.href)
                       ? "text-[#C0A15C] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-[#C0A15C] after:rounded-full"
-                      : "text-[#555] hover:text-[#C0A15C]"
+                      : "text-[#555] hover:text-[#C0A15C] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-[#C0A15C] after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                     }`}
                 >
                   {item.label}
@@ -83,7 +83,7 @@ export default function HomePageHeader() {
           <div className="hidden xl:flex items-center pl-6 border-l border-[rgba(192,161,92,0.2)] flex-shrink-0">
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#C0A15C] hover:bg-[#A2854A] text-white text-[10px] font-semibold uppercase tracking-widest px-5 py-2.5 transition-colors"
+              className="cta-shine inline-flex items-center gap-2 bg-[#C0A15C] hover:bg-[#A2854A] hover:shadow-md text-white text-[10px] font-semibold uppercase tracking-widest px-5 py-2.5 transition-all"
             >
               Enquire Now
               <svg width="11" height="11" viewBox="0 0 11 11" fill="none">

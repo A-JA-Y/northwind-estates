@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import ContactForm from "@/components/ContactForm";
 import EnquirySection from "@/components/EnquirySection";
-import ModalWrapper from "@/components/ModalWrapper";
 import StickyDownloadButton from "@/components/StickyButton";
 import { SITE_URL, project, contact } from "@/data/project";
 
@@ -89,7 +88,6 @@ export default function ContactUsPage() {
         title="Contact Us"
         subtitle="Share your details and our team will walk you through NorthWind Sanctuary — floor plans, tower availability, specifications and a site visit at Sector Pi-1, Greater Noida."
       />
-      <ModalWrapper />
 
       <section className="w-full px-6 py-12 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col gap-10">

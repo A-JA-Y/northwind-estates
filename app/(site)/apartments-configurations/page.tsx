@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
-import ModalWrapper from "@/components/ModalWrapper";
 import ReasonsToInvest from "@/components/ReasonToInvest";
 import ResidenceFeatures from "@/components/ResidenceFeatures";
 import StickyDownloadButton from "@/components/StickyButton";
@@ -138,7 +137,6 @@ export default function ApartmentsConfigurationsPage() {
         subtitle="Three towers — Amaltas, Banyan and Cedar. 3 & 4 BHK residences from 1,895 to 3,750 sq.ft. saleable, with five penthouses and four garden villas, in Sector Pi-1, Greater Noida."
       />
 
-      <ModalWrapper />
 
       <section className="w-full bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto space-y-16">

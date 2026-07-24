@@ -50,11 +50,11 @@ export default function PlansSection() {
         </div>
 
         {/* TYPICAL UNIT PLANS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 -mx-6 px-6 pb-2 md:grid md:grid-cols-3 md:gap-6 md:mx-0 md:px-0 md:pb-0 md:overflow-visible">
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className="rounded-lg overflow-hidden shadow-md border border-[#DCD6C2] bg-white cursor-pointer group"
+              className="rounded-lg overflow-hidden shadow-md border border-[#DCD6C2] bg-white cursor-pointer group shrink-0 w-[85%] snap-center md:w-auto md:shrink transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#C0A15C]/50"
               onClick={() => (isUnlocked ? setActivePlan(plan) : openModal())}
             >
               <div className="relative h-[190px] bg-[#F6F4EC]">

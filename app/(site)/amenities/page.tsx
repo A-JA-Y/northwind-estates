@@ -3,7 +3,6 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import Amenities from "@/components/Amenities";
-import ModalWrapper from "@/components/ModalWrapper";
 import StickyDownloadButton from "@/components/StickyButton";
 import { SITE_URL, project, zones, clubFacilities } from "@/data/project";
 
@@ -254,7 +253,6 @@ export default function AmenitiesPage() {
 
       <h1 className="sr-only">Amenities at NorthWind Sanctuary</h1>
 
-      <ModalWrapper />
 
       {/* Lead - The Quiet Reflections of Life */}
       <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-20">

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import FloorPlanSection from "@/components/FloorPageSection"
 
-import ModalWrapper from "@/components/ModalWrapper";
 import StickyDownloadButton from "@/components/StickyButton";
 
 import { SITE_URL, project, towers } from "@/data/project";
@@ -86,7 +85,6 @@ export default function FloorPlansPage() {
         title="NorthWind Sanctuary Floor Plans"
         subtitle="Typical unit plans for Amaltas, Banyan and Cedar — 3 & 4 BHK residences from 1,895 to 3,750 sq.ft. saleable — and the seven-zone master plan for the 4.48-acre site in Sector Pi-1, Greater Noida."
       />
-      <ModalWrapper />
       <FloorPlanSection />
 
       <section className="w-full bg-[#F6F4EC] border-t border-[#DCD6C2] py-14 px-6">

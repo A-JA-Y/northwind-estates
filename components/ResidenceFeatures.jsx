@@ -1,4 +1,9 @@
+import Image from "next/image";
 import { towers, clubFacilities } from "@/data/project";
+
+import masterBedroom from "@/assets/master-bedroom.webp";
+import livingDining from "@/assets/living-dining.webp";
+import clubExterior from "@/assets/club-exterior-dusk.webp";
 
 const interiorFeatures = [
   "Imported marble in foyer, drawing, dining & kitchen",
@@ -47,7 +52,18 @@ export default function ResidenceFeatures() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {/* Card 1 — Interiors */}
-          <div className="bg-white p-7" style={{ borderTop: "3px solid #C0A15C" }}>
+          <div className="bg-white overflow-hidden group shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500" style={{ borderTop: "3px solid #C0A15C" }}>
+            <div className="relative h-44 overflow-hidden">
+              <Image
+                src={masterBedroom}
+                alt="Master bedroom at NorthWind Sanctuary with wooden flooring and panelled walls"
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 340px"
+                quality={80}
+              />
+            </div>
+            <div className="p-7">
             <p className="uppercase" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "2px", color: "#C0A15C", marginBottom: "8px" }}>
               Interiors &amp; Finishes
             </p>
@@ -80,10 +96,22 @@ export default function ResidenceFeatures() {
                 ))}
               </div>
             </div>
+            </div>
           </div>
 
           {/* Card 2 — Configurations */}
-          <div className="bg-white p-7" style={{ borderTop: "3px solid #C0A15C" }}>
+          <div className="bg-white overflow-hidden group shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500" style={{ borderTop: "3px solid #C0A15C" }}>
+            <div className="relative h-44 overflow-hidden">
+              <Image
+                src={livingDining}
+                alt="Living and dining space at NorthWind Sanctuary"
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 340px"
+                quality={80}
+              />
+            </div>
+            <div className="p-7">
             <p className="uppercase" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "2px", color: "#C0A15C", marginBottom: "8px" }}>
               Space &amp; Layout
             </p>
@@ -119,10 +147,22 @@ export default function ResidenceFeatures() {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
 
           {/* Card 3 — Club & Neighbourhood */}
-          <div className="bg-white p-7" style={{ borderTop: "3px solid #C0A15C" }}>
+          <div className="bg-white overflow-hidden group shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500" style={{ borderTop: "3px solid #C0A15C" }}>
+            <div className="relative h-44 overflow-hidden">
+              <Image
+                src={clubExterior}
+                alt="The Club at NorthWind Sanctuary beside the pool at dusk"
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 340px"
+                quality={80}
+              />
+            </div>
+            <div className="p-7">
             <p className="uppercase" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "2px", color: "#C0A15C", marginBottom: "8px" }}>
               Club Roots &amp; Around
             </p>
@@ -159,6 +199,7 @@ export default function ResidenceFeatures() {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>

@@ -4,7 +4,6 @@ import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import AboutProject from "@/components/AboutProject";
 import ZonesSection from "@/components/ZonesSection";
-import ModalWrapper from "@/components/ModalWrapper";
 import StickyDownloadButton from "@/components/StickyButton";
 import clubLounge from "@/assets/club-lounge.webp";
 import aerialLandscape from "@/assets/aerial-landscape.webp";
@@ -90,7 +89,6 @@ export default function AboutNorthWindSanctuaryPage() {
         title="About NorthWind Sanctuary"
         subtitle="In the heart of the city, yet a world apart — 4.48 acres in Sector Pi-1, Greater Noida, where everyday whispers: less is more."
       />
-      <ModalWrapper />
 
       <AboutProject heading={true} />
 

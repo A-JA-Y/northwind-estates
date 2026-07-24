@@ -76,7 +76,7 @@ const ContactForm = () => {
     }`;
 
   return (
-    <div className="bg-white rounded-xl shadow-lg px-5 md:p-[55px] py-6 w-full">
+    <div className="bg-white rounded-xl shadow-xl ring-1 ring-black/5 border-t-4 border-[#C0A15C] px-5 md:p-[55px] py-6 w-full">
 
       <div className="flex flex-col md:flex-row md:items-center gap-6">
 

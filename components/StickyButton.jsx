@@ -24,7 +24,7 @@ export default function StickyDownloadButton() {
       title="Download the NorthWind Sanctuary brochure"
       aria-label="Download the NorthWind Sanctuary brochure"
       className="
-        fixed bottom-16 right-0
+        fixed bottom-24 md:bottom-16 right-0
         flex flex-col items-center justify-center
         bg-[#C0A15C] text-white font-semibold
         shadow-lg transition-colors duration-200

@@ -19,14 +19,18 @@ import clubGym from "@/assets/club-gym.webp";
 import badminton from "@/assets/badminton-court.webp";
 import banquetHall from "@/assets/banquet-hall.webp";
 import kidsPlay from "@/assets/kids-play-arena.webp";
+import clubExterior from "@/assets/club-exterior-dusk.webp";
+import balconyView from "@/assets/balcony-view.webp";
 
 const images = [
   mainPool,
+  clubExterior,
   centralLawn,
   clubLounge,
   clubGym,
   badminton,
   banquetHall,
+  balconyView,
   kidsPlay,
 ];
 
@@ -80,8 +84,11 @@ export default function Amenities() {
 
             <ul className="flex flex-col gap-[18px]">
               {amenities.map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <span className="flex-shrink-0 text-lg text-[#C0A15C]">
+                <li
+                  key={i}
+                  className="flex items-center gap-4 group transition-transform duration-300 hover:translate-x-1.5"
+                >
+                  <span className="flex-shrink-0 text-lg text-[#C0A15C] transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6">
                     {item.icon}
                   </span>
                   <span className="text-sm md:text-base">{item.text}</span>
@@ -98,7 +105,7 @@ export default function Amenities() {
             <div className="mt-3">
               <button
                 onClick={() => openModal()}
-                className="inline-block bg-[#C0A15C] text-white text-xs rounded-[8px] font-bold uppercase tracking-widest px-7 py-3 cursor-pointer hover:bg-[#A2854A] transition"
+                className="cta-shine inline-block bg-[#C0A15C] text-white text-xs rounded-[8px] font-bold uppercase tracking-widest px-7 py-3 cursor-pointer hover:bg-[#A2854A] hover:shadow-lg transition"
               >
                 Explore All Amenities
               </button>
