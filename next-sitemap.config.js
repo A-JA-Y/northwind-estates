@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 
-const SITE_URL = "https://www.northwindsanctuary.in";
+const SITE_URL = "https://thenorthwindestates.com";
 
 // Routes that are live today (app/(site)/*). Anything not listed here still gets
 // picked up automatically by next-sitemap from the build output — this map only

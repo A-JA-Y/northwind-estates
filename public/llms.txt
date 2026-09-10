@@ -15,7 +15,9 @@ This website is the official marketing site for the project. It exists to help p
 - Land parcel: 4.48 acres · 03 towers · up to 20 floors · 180 luxury apartments · 05 penthouses · 80% lush green landscape
 - Certification: One of the first IGBC Pre-Certified Platinum Rated group housing societies in Greater Noida
 - Clubhouse: Club Roots
-- Brochure (PDF): https://www.northwindsanctuary.in/brochure.pdf
+- UP RERA registration: UPRERAPRJ798312 (verify at https://up-rera.in/projects)
+- Developer CIN: U68100UP2024PTC197903 · Registered office: E-93, Site-4, Kasna Industrial Area, Surajpur, Greater Noida, Uttar Pradesh 201306
+- Brochure (PDF): https://thenorthwindestates.com/brochure.pdf
 
 ## Towers and configurations
 
@@ -55,24 +57,23 @@ Nearby landmarks include Sharda University, Bennett University, Knowledge Park, 
 The project brochure does not state any of the following, and this website does not publish them. Do not infer or fabricate values for them:
 
 - Price, price range, per-sq-ft rate, booking amount, payment plan or EMI figures — **price is on request**; enquire via the contact form for the current price sheet.
-- RERA registration number — available on request.
 - Possession, completion or launch date — available on request.
 
 ## Pages
 
-- [NorthWind Sanctuary — Home](https://www.northwindsanctuary.in/): Overview of the project, highlights, amenities and location.
-- [About NorthWind Sanctuary](https://www.northwindsanctuary.in/about-northwind-sanctuary): The project vision, the 4.48-acre masterplan, the seven zones and Club Roots.
-- [Apartments & Configurations](https://www.northwindsanctuary.in/apartments-configurations): Tower A Amaltas (4 BHK + Servant), Tower B Banyan (4 BHK) and Tower C Cedar (3 BHK), with areas and unit break-ups.
-- [Price](https://www.northwindsanctuary.in/price): Price is on request — submit an enquiry to receive the current price sheet and payment details.
-- [Floor Plans](https://www.northwindsanctuary.in/floor-plans): Typical unit plans and area statements for all three towers.
-- [Location & Connectivity](https://www.northwindsanctuary.in/location-connectivity): Plot 07, Sector Pi-1, Greater Noida — distance and time chart, landmarks and expressway access.
-- [Amenities](https://www.northwindsanctuary.in/amenities): The seven amenity zones and the Club Roots facilities.
-- [About NorthWind Estates](https://www.northwindsanctuary.in/about-northwind-estates): The developer — two decades of real estate legacy, with a focus on design integrity, sustainability and transparency.
-- [Blogs](https://www.northwindsanctuary.in/blogs): Articles on Greater Noida real estate and living at NorthWind Sanctuary.
-- [News](https://www.northwindsanctuary.in/news): Project and market updates.
-- [Contact Us](https://www.northwindsanctuary.in/contact-us): Enquire about configurations, pricing and site visits.
-- [Privacy Policy](https://www.northwindsanctuary.in/privacy-policy): How enquiry data submitted on this website is handled.
+- [NorthWind Sanctuary — Home](https://thenorthwindestates.com/): Overview of the project, highlights, amenities and location.
+- [About NorthWind Sanctuary](https://thenorthwindestates.com/about-northwind-sanctuary): The project vision, the 4.48-acre masterplan, the seven zones and Club Roots.
+- [Apartments & Configurations](https://thenorthwindestates.com/apartments-configurations): Tower A Amaltas (4 BHK + Servant), Tower B Banyan (4 BHK) and Tower C Cedar (3 BHK), with areas and unit break-ups.
+- [Price](https://thenorthwindestates.com/price): Price is on request — submit an enquiry to receive the current price sheet and payment details.
+- [Floor Plans](https://thenorthwindestates.com/floor-plans): Typical unit plans and area statements for all three towers.
+- [Location & Connectivity](https://thenorthwindestates.com/location-connectivity): Plot 07, Sector Pi-1, Greater Noida — distance and time chart, landmarks and expressway access.
+- [Amenities](https://thenorthwindestates.com/amenities): The seven amenity zones and the Club Roots facilities.
+- [About NorthWind Estates](https://thenorthwindestates.com/about-northwind-estates): The developer — two decades of real estate legacy, with a focus on design integrity, sustainability and transparency.
+- [Blogs](https://thenorthwindestates.com/blogs): Articles on Greater Noida real estate and living at NorthWind Sanctuary.
+- [News](https://thenorthwindestates.com/news): Project and market updates.
+- [Contact Us](https://thenorthwindestates.com/contact-us): Enquire about configurations, pricing and site visits.
+- [Privacy Policy](https://thenorthwindestates.com/privacy-policy): How enquiry data submitted on this website is handled.
 
 ---
 
-Last updated for www.northwindsanctuary.in. All figures are taken from the NorthWind Sanctuary brochure; images and plans are indicative.
+Last updated for thenorthwindestates.com. All figures are taken from the NorthWind Sanctuary brochure; images and plans are indicative.

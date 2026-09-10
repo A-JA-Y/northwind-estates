@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import LocationAdvantages from "@/components/LocationAdvantages";
 import StickyDownloadButton from "@/components/StickyButton";
@@ -9,112 +10,141 @@ import { SITE_URL, project, distances, landmarks } from "@/data/project";
 
 const PAGE_URL = `${SITE_URL}/location-connectivity`;
 const OG_IMAGE = `${SITE_URL}/northwind-hero.webp`;
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Sector+Pi-1%2C+Greater+Noida%2C+Uttar+Pradesh+201306";
+
+const PAGE_TITLE =
+  "NorthWind Estates Location & Connectivity | Sector Pi-1, Greater Noida";
+const PAGE_DESCRIPTION =
+  "NorthWind Estates is at Plot 07, Sector Pi-1, Greater Noida — 2 km from GNIDA Metro, 5 km from Pari Chowk and 30 km from Noida International Airport, with the Noida and Yamuna Expressways close at hand.";
 
 export const metadata: Metadata = {
-  title:
-    "Location & Connectivity — NorthWind Sanctuary, Sector Pi-1, Greater Noida",
-  description:
-    "NorthWind Sanctuary is located at Plot 07, Sector Pi-1, Greater Noida — 02 km from GNIDA Metro Station, 05 km from Pari Chowk and 30 km from Noida International Airport, with the Noida and Yamuna Expressways close at hand.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title:
-      "Location & Connectivity — NorthWind Sanctuary, Sector Pi-1, Greater Noida",
+    title: "NorthWind Estates Location — Sector Pi-1, Greater Noida",
     description:
-      "The brochure distance & time chart, the neighbourhood map and the expressway, metro and airport links that place Sanctuary in the heart of the city, yet a world apart.",
+      "Plot 07, Sector Pi-1 — 2 km from GNIDA Metro, 5 km from Pari Chowk, 30 km from the new airport. See the full connectivity map.",
     url: PAGE_URL,
+    type: "website",
     images: [{ url: OG_IMAGE }],
   },
 };
 
-/** Every figure below is read straight from the brochure chart in @/data/project. */
+/** Connectivity chart for this page — brochure figures plus indicative drive bands. */
+const connectivityRows = [
+  {
+    place: "GNIDA Metro Station (Aqua Line)",
+    distance: "2 km",
+    time: "5 min",
+  },
+  { place: "Pari Chowk", distance: "5 km", time: "7 min" },
+  { place: "Fortis Hospital", distance: "5 km", time: "7 min" },
+  { place: "Delhi Public School", distance: "8 km", time: "10 min" },
+  {
+    place: "Noida International Airport, Jewar",
+    distance: "30 km",
+    time: "30–40 min",
+  },
+  {
+    place: "South Delhi (via Noida Expressway)",
+    distance: "30 km",
+    time: "45–60 min",
+  },
+];
+
+/** The four corridors within reach of Sector Pi-1. */
+const corridors = [
+  {
+    name: "Noida–Greater Noida Link Road",
+    note: "the everyday route into Noida's Sectors 18, 62 and 125.",
+  },
+  {
+    name: "Noida Expressway",
+    note: "northwest into the Noida business districts, and onward to DND and South Delhi.",
+  },
+  {
+    name: "Yamuna Expressway",
+    note: "south toward Jewar, the new airport, and Agra beyond it.",
+  },
+  {
+    name: "Eastern Peripheral Expressway",
+    note: "the outer ring, for anyone who needs to reach Gurugram, Sonipat or Haryana without crossing Delhi.",
+  },
+];
+
+const neighbourhood = [
+  {
+    title: "Education",
+    body: "Sharda University, Bennett University and the wider Knowledge Park III cluster are within a short drive. Delhi Public School is 8 km out. For families, this is the sector's strongest argument: you're inside the education belt without living on top of it.",
+  },
+  {
+    title: "Healthcare",
+    body: "Fortis Hospital at 5 km, roughly seven minutes. Kailash and Sharda Hospital are also within the Knowledge Park radius.",
+  },
+  {
+    title: "Work",
+    body: "Alpha Commercial Belt, the GNIDA office, and the Noida Expressway corporate corridor via the Link Road. India Expo Mart is close enough to be useful and far enough to be irrelevant on a normal weekday.",
+  },
+  {
+    title: "Everyday",
+    body: "Ansal Plaza and the Pari Chowk retail cluster at 5 km, Radisson Blu nearby, and the Alpha and Beta market belts for daily needs.",
+  },
+];
+
+const addressAdvantages = [
+  {
+    lead: "Density is fixed.",
+    body: "Pi-1 was planned at low FAR. The sector's built form is largely settled, which means the skyline around NorthWind Estates isn't going to close in the way it has across the Noida Extension belt.",
+  },
+  {
+    lead: "The metro is already running.",
+    body: "GNIDA Station on the Aqua Line is 2 km away and operational — not proposed, not sanctioned. Among property for sale in Greater Noida, \"metro at 2 km\" and \"metro coming soon\" are very different propositions.",
+  },
+  {
+    lead: "Four expressways, four directions.",
+    body: "Airport south, Delhi northwest, the outer ring east. Wherever the region's growth concentrates next, Pi-1 has a road to it.",
+  },
+];
+
 const dt = (place: string) => {
   const row = distances.find((d) => d.place === place);
   return row ? `${row.distance} · ${row.time}` : "";
 };
 
-const rowsFor = (places: string[]) =>
-  distances.filter((d) => places.includes(d.place));
-
-const transitRows = rowsFor(["GNIDA Metro Station", "Pari Chowk"]);
-const roadRows = rowsFor(["Pari Chowk", "Delhi"]);
-const airRows = rowsFor(["Noida International Airport"]);
-const civicRows = rowsFor(["Fortis Hospital", "Delhi Public School"]);
-
-/** Corridors and landmarks as labelled on the brochure location map. */
-const corridors = [
-  {
-    name: "Noida–Greater Noida Link Road",
-    note: "The everyday spine of the address — the road that carries Sector Pi-1 straight into Noida without a detour.",
-  },
-  {
-    name: "Noida Expressway",
-    note: "The high-speed run north-west towards Noida's business districts and the Delhi border.",
-  },
-  {
-    name: "Yamuna Expressway",
-    note: "The southern corridor, and the road that carries you towards Noida International Airport and Agra.",
-  },
-  {
-    name: "Eastern Peripheral Expressway",
-    note: "The outer ring that lets you bypass Delhi altogether when you are heading across the NCR.",
-  },
-  {
-    name: "Hindon River",
-    note: "The natural edge to the north-west of the map — the green boundary of the Greater Noida plan.",
-  },
-];
-
-const neighbourhoodGroups = [
-  {
-    title: "Learning",
-    items: ["Sharda University", "Bennett University", "Knowledge Park"],
-  },
-  {
-    title: "Business & Civic",
-    items: ["India Expo Mart", "GNIDA Office", "Alpha Commercial Belt"],
-  },
-  {
-    title: "Hospitality & Everyday",
-    items: ["Radisson Blu Hotel", "Sector 34 & Sector Pi"],
-  },
-];
-
 const faqData = [
   {
-    question: "Where exactly is NorthWind Sanctuary located?",
-    answer: `NorthWind Sanctuary is at ${project.address} — a 4.48-acre parcel in ${project.locality}, in the Gautam Buddha Nagar district. The PIN code for the address is 201306.`,
+    question: "Where exactly is NorthWind Estates located?",
+    answer: `NorthWind Estates' project NorthWind Sanctuary is at ${project.address} — a 4.48-acre parcel in ${project.locality}, in the Gautam Buddha Nagar district. The PIN code for the address is 201306.`,
   },
   {
-    question: "What is the nearest metro station to NorthWind Sanctuary?",
+    question: "What is the nearest metro station to NorthWind Estates?",
     answer: `GNIDA Metro Station on the Aqua Line is the nearest station — ${dt(
       "GNIDA Metro Station",
-    )} from the site, per the brochure distance and time chart.`,
+    )} from the site, and already operational.`,
   },
   {
-    question:
-      "How far is Noida International Airport from NorthWind Sanctuary?",
-    answer: `Noida International Airport is ${dt(
-      "Noida International Airport",
-    )} from Sanctuary, reached via the Yamuna Expressway. Delhi is the same on the chart — ${dt(
-      "Delhi",
-    )}.`,
+    question: "How far is Noida International Airport from NorthWind Estates?",
+    answer:
+      "Noida International Airport at Jewar sits about 30 km south down the Yamuna Expressway — an indicative 30–40 minute drive. Sector Pi-1 is close enough to benefit from the airport corridor's development, far enough not to sit under a flight path, and connected to it by expressway rather than by sector roads.",
   },
   {
     question: "Which roads and expressways serve Sector Pi-1?",
     answer:
-      "The brochure map places Sanctuary between the Noida–Greater Noida Link Road, the Noida Expressway, the Yamuna Expressway and the Eastern Peripheral Expressway — four corridors that between them reach Noida, Delhi, the airport and the wider NCR without threading city traffic.",
+      "Four corridors are within reach: the Noida–Greater Noida Link Road into Noida's Sectors 18, 62 and 125; the Noida Expressway northwest to DND and South Delhi; the Yamuna Expressway south toward Jewar and the new airport; and the Eastern Peripheral Expressway for Gurugram, Sonipat and Haryana without crossing Delhi.",
   },
   {
-    question: "What schools and hospitals are close to NorthWind Sanctuary?",
+    question: "What schools and hospitals are close to NorthWind Estates?",
     answer: `Delhi Public School is ${dt(
       "Delhi Public School",
     )} away and Fortis Hospital is ${dt(
       "Fortis Hospital",
-    )} away. Sharda University, Bennett University and Knowledge Park are all marked within the neighbourhood on the brochure map.`,
+    )} away. Sharda University, Bennett University and the Knowledge Park III cluster are all within a short drive.`,
   },
   {
     question: "What else is in the neighbourhood?",
-    answer: `The landmarks shown around Sanctuary on the brochure map include ${landmarks.join(
+    answer: `The landmarks around the project include ${landmarks.join(
       ", ",
     )} — with Pari Chowk itself ${dt("Pari Chowk")} from the gate.`,
   },
@@ -124,152 +154,114 @@ export default function LocationConnectivityPage() {
   return (
     <>
       <h1 className="sr-only">
-        Location &amp; Connectivity — NorthWind Sanctuary, Sector Pi-1, Greater
+        NorthWind Estates — Location &amp; Connectivity, Sector Pi-1, Greater
         Noida
       </h1>
 
       <PageBanner
-        eyebrow="Your Gateway to Peace"
-        title="Location & Connectivity — NorthWind Sanctuary, Sector Pi-1, Greater Noida"
-        subtitle="In the heart of the city, yet a world apart. Plot 07, Sector Pi-1 sits where the Link Road, the Expressways and the Aqua Line meet — and where the noise of all three stops at the gate."
+        eyebrow="Location & Connectivity"
+        title="NorthWind Estates — Location & Connectivity"
+        subtitle="Plot 07, Sector Pi-1, Greater Noida, Uttar Pradesh 201306"
       />
 
-      {/* Where exactly */}
+      {/* Intro + where exactly */}
       <section className="w-full bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs font-bold uppercase mb-4 text-[#C0A15C] tracking-[0.2em]">
-            The Calm Begins Here
-          </p>
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-3">
+              There are two kinds of quiet in Greater Noida. One comes from
+              being far from everything. The other comes from being in a sector
+              that was planned properly, where the roads are wide, the plots
+              are large, and nobody built a market at your gate.
+            </p>
+            <p className="text-[#0B3B2C] font-semibold text-base md:text-lg">
+              Sector Pi-1 is the second kind.
+            </p>
+          </div>
 
           <h2 className="text-center font-bold text-gray-900 mb-6 text-3xl md:text-4xl leading-tight">
-            Where Exactly is NorthWind Sanctuary?
+            Where Exactly Is NorthWind Estates?
           </h2>
 
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-4">
-              {project.name} occupies a 4.48-acre parcel at{" "}
-              {project.locality} — an established address on Greater Noida&apos;s
-              planned grid, a few minutes from Pari Chowk and the GNIDA Metro
-              Station, and an easy half-hour from both Delhi and Noida
-              International Airport. It is a location that asks little of your
-              day: the metro is a short hop, the school run and the hospital are
-              inside ten minutes, and no journey is hostage to a single road.
+              Plot 07, Sector Pi-1 — on the established western side of Greater
+              Noida, off the Noida–Greater Noida Link Road, roughly midway
+              between Pari Chowk and the Knowledge Park belt.
             </p>
-            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-              Eighty per cent of the site is given back to landscape, and the
-              three towers are set deep enough into it that the city becomes a
-              view rather than a neighbour. There&apos;s those thinking more or
-              less — and there&apos;s you, believing in less is more.
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-6">
+              If you know the city, that placement will tell you most of what
+              you need. If you don&apos;t: Pi-1 is one of the sectors that was
+              laid out in Greater Noida&apos;s original master plan rather than
+              absorbed into it later. Wide sector roads, low FAR, mature
+              planting along the arterials, and no realistic prospect of a
+              high-density cluster appearing next door.
             </p>
 
-            <div className="mt-6">
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Sector+Pi-1%2C+Greater+Noida%2C+Uttar+Pradesh+201306"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#C0A15C] hover:bg-[#A2854A] text-white font-semibold px-6 py-3 rounded-md transition-colors"
-              >
-                Get Driving Directions →
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
-            <div className="bg-[#F6F4EC] p-5 rounded-lg border border-[#DCD6C2]">
-              <p className="font-semibold text-[#0B3B2C] mb-1">
-                Project Address
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {project.name}
-                <br />
-                Plot 07, Sector Pi-1
-                <br />
-                Greater Noida, Uttar Pradesh 201306
-              </p>
-            </div>
-            <div className="bg-[#F6F4EC] p-5 rounded-lg border border-[#DCD6C2]">
-              <p className="font-semibold text-[#0B3B2C] mb-1">
-                Developed By
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {project.developer}
-                <br />
-                Architecture by {project.architect}
-                <br />
-                {project.certification}
-              </p>
-            </div>
+            <Link
+              href="/contact-us"
+              className="inline-block bg-[#C0A15C] hover:bg-[#A2854A] text-white font-semibold px-6 py-3 rounded-md transition-colors"
+            >
+              Get the exact location &amp; site visit details →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Brochure map + exact distance & time chart + landmarks */}
-      <LocationAdvantages />
-
-      {/* Connectivity narrative */}
+      {/* Connectivity table + corridors */}
       <section className="w-full bg-[#F6F4EC] py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs font-bold uppercase mb-4 text-[#C0A15C] tracking-[0.2em]">
-            Your View to the World
-          </p>
-          <h2 className="font-bold text-gray-900 text-2xl md:text-3xl mb-4 text-center">
+          <h2 className="font-bold text-gray-900 text-2xl md:text-3xl mb-8 text-center">
             Connectivity from Sector Pi-1
           </h2>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-base max-w-3xl mx-auto text-center mb-12">
-            Read the brochure map and the logic of the address becomes obvious.
-            Sanctuary sits inside a lattice of four corridors and one metro
-            line — so no single journey depends on any single road.
-          </p>
 
-          {/* Metro */}
-          <div className="grid gap-8 lg:grid-cols-2 items-center mb-14">
+          <div className="grid gap-8 lg:grid-cols-2 items-center mb-6">
             <div className="rounded-lg overflow-hidden border border-[#DCD6C2] shadow-md">
               <Image
                 src={metroImg}
-                alt="Aqua Line metro serving Greater Noida, two kilometres from NorthWind Sanctuary"
+                alt="Aqua Line metro serving Greater Noida, two kilometres from NorthWind Estates"
                 className="w-full h-auto object-cover"
                 sizes="(max-width: 1024px) 100vw, 520px"
                 quality={85}
               />
             </div>
-            <div>
-              <h3 className="font-bold text-gray-900 text-xl mb-3">
-                Metro — the Aqua Line at GNIDA Station
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-                GNIDA Metro Station is the nearest boarding point on the Aqua
-                Line, {dt("GNIDA Metro Station")} from the gate — close enough
-                that the daily commute stops being a car decision. From there
-                the line threads the length of the Noida–Greater Noida corridor
-                and into the wider Delhi Metro network.
-              </p>
-              <ul className="space-y-2">
-                {transitRows.map((row) => (
-                  <li
-                    key={row.place}
-                    className="flex items-baseline justify-between gap-4 border-b border-[#DCD6C2] pb-2"
-                  >
-                    <span className="text-gray-800 text-sm">{row.place}</span>
-                    <span className="shrink-0 flex items-baseline gap-3 text-sm">
-                      <span className="font-semibold text-[#0B3B2C] tabular-nums">
+
+            <div className="overflow-x-auto rounded-lg border border-[#DCD6C2] shadow-sm bg-white">
+              <table className="w-full text-sm text-left">
+                <thead className="bg-[#0B3B2C] text-[#F0E9D6] uppercase text-xs tracking-wider">
+                  <tr>
+                    <th className="px-4 py-3">Destination</th>
+                    <th className="px-4 py-3 whitespace-nowrap">Distance</th>
+                    <th className="px-4 py-3 whitespace-nowrap">Drive time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {connectivityRows.map((row) => (
+                    <tr key={row.place} className="border-t border-[#DCD6C2]">
+                      <td className="px-4 py-3 text-gray-800">{row.place}</td>
+                      <td className="px-4 py-3 font-semibold text-[#0B3B2C] tabular-nums whitespace-nowrap">
                         {row.distance}
-                      </span>
-                      <span className="text-[#C0A15C] tabular-nums">
+                      </td>
+                      <td className="px-4 py-3 text-[#C0A15C] tabular-nums whitespace-nowrap">
                         {row.time}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
 
-          {/* Road */}
-          <div className="grid gap-8 lg:grid-cols-2 items-center mb-14">
+          <p className="text-xs text-gray-500 italic text-center mb-14">
+            Drive times are indicative and vary with traffic. Verify against
+            live conditions at the hour you&apos;d actually be travelling.
+          </p>
+
+          <div className="grid gap-8 lg:grid-cols-2 items-center">
             <div className="lg:order-2 rounded-lg overflow-hidden border border-[#DCD6C2] shadow-md">
               <Image
                 src={expresswayImg}
-                alt="Expressway connectivity around Sector Pi-1, Greater Noida — the Noida Expressway, Yamuna Expressway and Eastern Peripheral Expressway"
+                alt="Expressway connectivity around Sector Pi-1, Greater Noida — four corridors in four directions"
                 className="w-full h-auto object-cover"
                 sizes="(max-width: 1024px) 100vw, 520px"
                 quality={85}
@@ -277,15 +269,13 @@ export default function LocationConnectivityPage() {
             </div>
             <div className="lg:order-1">
               <h3 className="font-bold text-gray-900 text-xl mb-3">
-                Road — four corridors, one address
+                Four corridors, four directions
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-                Sanctuary is held between the Noida–Greater Noida Link Road and
-                three expressways. Pari Chowk — the roundabout every route here
-                is measured from — is {dt("Pari Chowk")} away, and Delhi is{" "}
-                {dt("Delhi")}.
+                The expressway position is the part that matters most. Four
+                corridors are within reach of Sector Pi-1:
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-5">
                 {corridors.map((c) => (
                   <li key={c.name} className="flex items-start gap-3">
                     <span className="text-[#C0A15C] mt-1">•</span>
@@ -298,136 +288,166 @@ export default function LocationConnectivityPage() {
                   </li>
                 ))}
               </ul>
-              <ul className="space-y-2 mt-5">
-                {roadRows.map((row) => (
-                  <li
-                    key={row.place}
-                    className="flex items-baseline justify-between gap-4 border-b border-[#DCD6C2] pb-2"
-                  >
-                    <span className="text-gray-800 text-sm">{row.place}</span>
-                    <span className="shrink-0 flex items-baseline gap-3 text-sm">
-                      <span className="font-semibold text-[#0B3B2C] tabular-nums">
-                        {row.distance}
-                      </span>
-                      <span className="text-[#C0A15C] tabular-nums">
-                        {row.time}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Four directions out. That&apos;s unusual, and it&apos;s the
+                practical reason Pi-1 holds up better than its
+                distance-from-Delhi figure suggests.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Air + civic */}
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="bg-white p-6 rounded-lg border border-[#DCD6C2]">
-              <h3 className="font-bold text-gray-900 text-xl mb-3">
-                Air — Noida International Airport
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-                The Yamuna Expressway runs south from the neighbourhood towards
-                Noida International Airport — {dt("Noida International Airport")}{" "}
-                on the brochure chart. For a home this quiet, the world stays
-                unusually close.
-              </p>
-              <ul className="space-y-2">
-                {airRows.map((row) => (
-                  <li
-                    key={row.place}
-                    className="flex items-baseline justify-between gap-4 border-b border-[#DCD6C2] pb-2"
-                  >
-                    <span className="text-gray-800 text-sm">{row.place}</span>
-                    <span className="shrink-0 flex items-baseline gap-3 text-sm">
-                      <span className="font-semibold text-[#0B3B2C] tabular-nums">
-                        {row.distance}
-                      </span>
-                      <span className="text-[#C0A15C] tabular-nums">
-                        {row.time}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-[#DCD6C2]">
-              <h3 className="font-bold text-gray-900 text-xl mb-3">
-                Everyday — care and classrooms
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-                The two journeys a family actually makes every week are the two
-                shortest on the chart: the school run and the hospital, both
-                inside ten minutes of the gate.
-              </p>
-              <ul className="space-y-2">
-                {civicRows.map((row) => (
-                  <li
-                    key={row.place}
-                    className="flex items-baseline justify-between gap-4 border-b border-[#DCD6C2] pb-2"
-                  >
-                    <span className="text-gray-800 text-sm">{row.place}</span>
-                    <span className="shrink-0 flex items-baseline gap-3 text-sm">
-                      <span className="font-semibold text-[#0B3B2C] tabular-nums">
-                        {row.distance}
-                      </span>
-                      <span className="text-[#C0A15C] tabular-nums">
-                        {row.time}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-[11px] text-gray-500 mt-8 italic text-center">
-            Map not to scale. Approximate distance &amp; time.
+      {/* The airport question */}
+      <section className="w-full bg-white py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-bold text-gray-900 text-2xl md:text-3xl mb-4 text-center">
+            The Airport Question
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-4 text-center">
+            Noida International Airport at Jewar sits about 30 km south down
+            the Yamuna Expressway.
+          </p>
+          <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-4">
+            It&apos;s worth being clear-eyed about what that means. The airport
+            is the single largest variable in Greater Noida property values
+            right now, and every project in the region is invoking it. The
+            honest position: Sector Pi-1 is close enough to benefit from the
+            corridor&apos;s development, far enough not to sit under a flight
+            path, and connected to it by expressway rather than by sector
+            roads.
+          </p>
+          <p className="text-[#0B3B2C] font-semibold text-sm md:text-base text-center">
+            That&apos;s a better position than either extreme.
           </p>
         </div>
       </section>
 
+      {/* Brochure map + exact distance & time chart + landmarks */}
+      <LocationAdvantages />
+
       {/* Neighbourhood */}
       <section className="w-full bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs font-bold uppercase mb-4 text-[#C0A15C] tracking-[0.2em]">
-            Begin Where the World Pauses
-          </p>
-          <h2 className="font-bold text-gray-900 text-2xl md:text-3xl mb-4 text-center">
-            The Neighbourhood Around Sanctuary
+          <h2 className="font-bold text-gray-900 text-2xl md:text-3xl mb-10 text-center">
+            The Neighbourhood Around NorthWind Estates
           </h2>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-base max-w-3xl mx-auto text-center mb-12">
-            Sector Pi-1 is not a frontier address waiting for a neighbourhood to
-            arrive. The institutions, the civic centre and the commercial belt
-            marked on the brochure map are all already standing — which is why
-            the drives here are measured in minutes rather than promises.
-          </p>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {neighbourhoodGroups.map((group) => (
+          <div className="grid gap-6 md:grid-cols-2">
+            {neighbourhood.map((group) => (
               <div
                 key={group.title}
                 className="bg-[#F2EEE0] p-6 rounded-lg border border-[#CFC7B2]"
               >
-                <h3 className="font-bold text-[#0B3B2C] text-base mb-4">
+                <h3 className="font-bold text-[#0B3B2C] text-base mb-3">
                   {group.title}
                 </h3>
-                <ul className="space-y-2">
-                  {group.items.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="text-[#C0A15C] mt-1">•</span>
-                      <span className="text-[#4A5B50] text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-[#4A5B50] text-sm leading-relaxed">
+                  {group.body}
+                </p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <p className="text-gray-600 leading-relaxed text-sm max-w-3xl mx-auto text-center mt-10">
-            Fortis Hospital, Delhi Public School and Pari Chowk complete the
-            picture — the three destinations closest to the gate, and the three
-            that decide how a week actually feels.
+      {/* Why the address matters */}
+      <section className="w-full bg-[#F6F4EC] py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-bold text-gray-900 text-2xl md:text-3xl mb-4 text-center">
+            Why the Address Matters More Than the Amenities
+          </h2>
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base mb-3 text-center font-semibold">
+            Every project in Greater Noida can build a clubhouse. Very few can
+            build a location.
+          </p>
+          <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-8 text-center">
+            If you&apos;re weighing apartments in Greater Noida at this level,
+            three things about Pi-1 are worth more than any amenity list,
+            because none of them can be added later:
+          </p>
+
+          <ol className="space-y-4 mb-8">
+            {addressAdvantages.map((item, i) => (
+              <li
+                key={item.lead}
+                className="flex gap-4 bg-white border border-[#DCD6C2] rounded-lg p-5"
+              >
+                <span className="text-[#C0A15C] font-bold text-lg leading-none pt-0.5">
+                  {i + 1}
+                </span>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                  <strong className="text-gray-900">{item.lead}</strong>{" "}
+                  {item.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+
+          <p className="text-gray-600 leading-relaxed text-sm md:text-base text-center">
+            That&apos;s the case for the address. What sits on it — 185 homes
+            across 4.48 acres, three towers, 80% of the ground left as
+            landscape, IGBC Pre-Certified Platinum — is on the{" "}
+            <Link
+              href="/about-northwind-sanctuary"
+              className="text-[#C0A15C] hover:underline font-semibold"
+            >
+              project pages
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* Plan a site visit */}
+      <section className="w-full bg-[#0B3B2C] py-16 px-6 text-[#F0E9D6]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-bold text-2xl md:text-3xl mb-4">
+            Plan a Site Visit
+          </h2>
+          <p className="leading-relaxed text-sm md:text-base mb-6 text-[#EDE9DA]">
+            The drive times above are numbers. The sector reads differently
+            when you&apos;re standing in it — which is the honest reason
+            we&apos;d rather you came than took our word for the table.
+          </p>
+          <p className="font-semibold text-base mb-8">
+            Plot 07, Sector Pi-1, Greater Noida, Uttar Pradesh 201306
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <Link
+              href="/contact-us"
+              className="inline-block bg-[#C0A15C] hover:bg-[#A2854A] text-white text-sm font-semibold tracking-widest uppercase px-8 py-4 rounded transition-colors"
+            >
+              Book a Site Visit →
+            </Link>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-[#C0A15C] text-[#F0E9D6] text-sm font-semibold tracking-widest uppercase px-8 py-4 rounded hover:bg-[#08251C] transition-colors"
+            >
+              Get Directions →
+            </a>
+          </div>
+          <p className="text-sm text-[#CFC7B2] leading-relaxed">
+            Site visits run seven days a week. Tell us roughly when and
+            we&apos;ll have current availability ready when you arrive.
+          </p>
+          <p className="text-sm mt-8">
+            Related:{" "}
+            <Link
+              href="/floor-plans"
+              className="text-[#C0A15C] hover:underline font-semibold"
+            >
+              Floor plans &amp; master plan →
+            </Link>{" "}
+            ·{" "}
+            <Link
+              href="/price"
+              className="text-[#C0A15C] hover:underline font-semibold"
+            >
+              Price &amp; availability →
+            </Link>
           </p>
         </div>
       </section>
@@ -501,9 +521,8 @@ export default function LocationConnectivityPage() {
                 "@type": "WebPage",
                 "@id": `${PAGE_URL}#webpage`,
                 url: PAGE_URL,
-                name: "Location & Connectivity — NorthWind Sanctuary, Sector Pi-1, Greater Noida",
-                description:
-                  "NorthWind Sanctuary is located at Plot 07, Sector Pi-1, Greater Noida — 02 km from GNIDA Metro Station, 05 km from Pari Chowk and 30 km from Noida International Airport.",
+                name: PAGE_TITLE,
+                description: PAGE_DESCRIPTION,
                 breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
                 about: { "@id": `${SITE_URL}/#residence` },
                 mainEntity: { "@id": `${PAGE_URL}#faq` },
@@ -515,7 +534,7 @@ export default function LocationConnectivityPage() {
                 "@id": `${SITE_URL}/#residence`,
                 name: project.name,
                 description:
-                  "A 4.48-acre, three-tower residential development at Sector Pi-1, Greater Noida — 180 luxury apartments and 05 penthouses set in 80% lush green landscape, with Club Roots at its heart.",
+                  "A 4.48-acre, three-tower residential development at Sector Pi-1, Greater Noida — 185 homes set in 80% lush green landscape, with Club Roots at its heart.",
                 url: `${SITE_URL}/`,
                 image: OG_IMAGE,
                 address: {
@@ -533,8 +552,7 @@ export default function LocationConnectivityPage() {
                   description:
                     "Approximate centroid of Sector Pi-1, Greater Noida.",
                 },
-                hasMap:
-                  "https://www.google.com/maps/search/?api=1&query=Sector+Pi-1%2C+Greater+Noida%2C+Uttar+Pradesh+201306",
+                hasMap: MAPS_URL,
                 numberOfAccommodationUnits: {
                   "@type": "QuantitativeValue",
                   value: 185,
@@ -560,7 +578,7 @@ export default function LocationConnectivityPage() {
               {
                 "@type": "RealEstateAgent",
                 "@id": `${SITE_URL}/#organization`,
-                name: "NorthWind Sanctuary — Channel Partner",
+                name: "NorthWind Estates — Channel Partner",
                 url: `${SITE_URL}/`,
                 logo: OG_IMAGE,
                 image: OG_IMAGE,

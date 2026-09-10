@@ -2,7 +2,7 @@
 // (assets-northwindestates/northwindbrochure.pdf). Do not add numbers that the
 // brochure does not state — pricing and RERA details are not in it.
 
-export const SITE_URL = "https://www.northwindsanctuary.in";
+export const SITE_URL = "https://thenorthwindestates.com";
 
 export const project = {
   name: "NorthWind Sanctuary",
@@ -412,13 +412,45 @@ export const areaDefinitions = [
   },
 ];
 
-// RERA registration is not stated in the brochure. Fill these in before going live.
+// RERA registration as listed for Northwind Sanctuary on UP-RERA and project
+// listings. Cross-check against the RERA certificate before go-live.
 export const rera = {
-  number: "",
+  number: "UPRERAPRJ798312",
   verifyUrl: "https://up-rera.in/projects",
 };
 
+// Company details per MCA records (CIN U68100UP2024PTC197903, ROC Kanpur) and
+// press coverage of the founding team.
+export const developerInfo = {
+  cin: "U68100UP2024PTC197903",
+  incorporated: "19 February 2024",
+  registeredOffice:
+    "E-93, Site-4, Kasna Industrial Area, Surajpur, Greater Noida, Uttar Pradesh 201306",
+  legacy:
+    "Backed by a promoter group with over 20 years in real estate and more than 1 million sq.ft. delivered across Delhi NCR.",
+  directors: [
+    {
+      name: "Shaurya Garg",
+      role: "Managing Director — Marketing & Sales",
+      background:
+        "B.Tech from Delhi Technological University and an MSc in International Real Estate & City Planning from University College London.",
+    },
+    {
+      name: "Samyak Jain",
+      role: "Director — Design & Construction",
+      background:
+        "Architect from CEPT Ahmedabad, focused on climate-responsive, human-centric design.",
+    },
+    {
+      name: "Anubhav Jain",
+      role: "Director — Finance & Management",
+      background:
+        "Global business education at Durham University, UK, with a family legacy rooted in real estate.",
+    },
+  ],
+};
+
 export const contact = {
-  phone: "",
-  email: "",
+  phone: "+91 9810890353",
+  email: "sales@thenorthwindestates.com",
 };

@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <p className="mt-3">
               By using or accessing{" "}
               <span className="font-medium text-gray-800">
-                www.northwindsanctuary.in
+                thenorthwindestates.com
               </span>{" "}
               you agree with this disclaimer without any limitation. By accessing
               this website, the viewer confirms that the information — including

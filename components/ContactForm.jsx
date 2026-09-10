@@ -5,12 +5,21 @@ import submitForm from "../api/submitform";
 import { useRouter } from "next/navigation";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
-const ContactForm = () => {
+const CONFIG_OPTIONS = [
+  "3 BHK",
+  "4 BHK",
+  "4 BHK + Servant",
+  "Penthouse",
+  "Garden Villa",
+];
+
+const ContactForm = ({ extended = false }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    ...(extended ? { configuration: "", message: "" } : {}),
   });
 
   const [status, setStatus] = useState(null);
@@ -151,19 +160,61 @@ const ContactForm = () => {
             )}
           </div>
 
-          {/* Submit Button */}
-          <div className="flex-shrink-0">
-            <button
-              onClick={handleSubmit}
-              disabled={loading}
-              className="w-full md:w-auto bg-[#C0A15C] hover:bg-[#A2854A] text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-md transition-colors duration-300 whitespace-nowrap"
-            >
-              {loading ? "Submitting..." : "Book Site Visit"}
-            </button>
-          </div>
+          {/* Submit Button (compact form only) */}
+          {!extended && (
+            <div className="flex-shrink-0">
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="w-full md:w-auto bg-[#C0A15C] hover:bg-[#A2854A] text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-md transition-colors duration-300 whitespace-nowrap"
+              >
+                {loading ? "Submitting..." : "Book Site Visit"}
+              </button>
+            </div>
+          )}
 
         </div>
       </div>
+
+      {/* Extended fields: configuration + message */}
+      {extended && (
+        <div className="mt-4 flex flex-col gap-3">
+          <div className="flex flex-col md:flex-row gap-3">
+            <select
+              name="configuration"
+              value={formData.configuration}
+              onChange={handleChange}
+              className={`${inputClass(false)} md:flex-1 bg-white ${
+                formData.configuration ? "text-gray-700" : "text-gray-400"
+              }`}
+            >
+              <option value="">Configuration of interest (optional)</option>
+              {CONFIG_OPTIONS.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
+            </select>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Message — floor preference, budget, planned visit date… (optional)"
+              rows={2}
+              className={`${inputClass(false)} md:flex-[2] resize-none`}
+            />
+          </div>
+          <div>
+            <button
+              onClick={handleSubmit}
+              disabled={loading}
+              className="w-full md:w-auto bg-[#C0A15C] hover:bg-[#A2854A] text-white text-sm font-semibold tracking-widest uppercase px-8 py-3 rounded-md transition-colors duration-300 whitespace-nowrap"
+            >
+              {loading ? "Submitting..." : "Submit Enquiry →"}
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* STATUS MESSAGES */}
       {status === "success" && (

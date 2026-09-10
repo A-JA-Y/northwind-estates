@@ -27,10 +27,18 @@ import celebrations from "@/assets/celebrations.webp";
 
 export const metadata: Metadata = {
   title:
-    "Amenities at NorthWind Sanctuary | Seven Zones & Club Roots, Greater Noida",
+    "NorthWind Estates Amenities | Club Roots & Seven Zones, Greater Noida",
   description:
-    "Explore the amenities at NorthWind Sanctuary, Sector Pi-1, Greater Noida — seven landscaped zones across a 4.48-acre site with 80% lush green landscape, four pools, a full sports zone, the Serenity Walk and Club Roots.",
+    "NorthWind Estates amenities — Club Roots with private theatre, banquet halls and gymnasium, plus four pools, a yoga deck, pickleball and cricket courts across seven landscaped zones in Sector Pi-1, Greater Noida.",
   alternates: { canonical: `${SITE_URL}/amenities` },
+  openGraph: {
+    title: "NorthWind Estates Amenities — Club Roots & Seven Landscaped Zones",
+    description:
+      "80% of 4.48 acres left as landscape. Four pools, a private theatre, pickleball and cricket courts, a pet park and a tree house.",
+    url: `${SITE_URL}/amenities`,
+    type: "website",
+    images: [`${SITE_URL}/northwind-hero.webp`],
+  },
 };
 
 // Every zone below is rendered from `zones` in @/data/project (the master-plan
@@ -247,11 +255,11 @@ export default function AmenitiesPage() {
 
       <PageBanner
         eyebrow="Lifestyle"
-        title="Amenities"
-        subtitle="Seven zones, one landscape — the amenities at NorthWind Sanctuary, Sector Pi-1, Greater Noida."
+        title="Amenities at NorthWind Estates"
+        subtitle="Club Roots and seven landscaped zones across 4.48 acres, Sector Pi-1, Greater Noida"
       />
 
-      <h1 className="sr-only">Amenities at NorthWind Sanctuary</h1>
+      <h1 className="sr-only">Amenities at NorthWind Estates</h1>
 
 
       {/* Lead - The Quiet Reflections of Life */}
@@ -262,17 +270,16 @@ export default function AmenitiesPage() {
               The Quiet Reflections of Life
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#123528] leading-tight mb-6">
-              In the heart of the city, yet a world apart
+              Most amenity lists are written to be long. This one is worth
+              reading for the opposite reason.
             </h2>
             <p className="text-lg leading-relaxed text-[#4A5B50] mb-5">
-              At Sanctuary, every amenity is more than a feature, it&apos;s a
-              feeling. Every space you tread is crafted with care and intention.
-              These spaces add warmth to your everyday, offering moments of joy
-              and connection. Here, leisure embraces lifestyle, wellness meets
-              wonder and every path leads you closer to what truly matters.
-              Tucked within the city&apos;s embrace, Sanctuary is a tranquil
-              retreat where recreation, reflection, and togetherness find their
-              perfect rhythm.
+              NorthWind Estates puts 185 homes on 4.48 acres and leaves 80% of
+              the ground as landscape. That single decision is what makes
+              everything below work — not because the facilities are unusual,
+              but because so few people are sharing them. Four pools across 185
+              families is a different proposition from four pools across
+              1,200.
             </p>
             <p className="text-base leading-relaxed text-[#4A5B50]">
               The master plan by {project.architect} divides the 4.48-acre site
@@ -320,13 +327,14 @@ export default function AmenitiesPage() {
               The Master Plan
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#123528] leading-tight mb-5">
-              The Seven Zones of NorthWind Sanctuary
+              Seven Landscaped Zones
             </h2>
             <p className="text-lg leading-relaxed text-[#4A5B50]">
-              There&apos;s those thinking more or less, and there&apos;s you
-              believing in less is more. Every element of the landscape has a
-              place in one of seven zones — arrival, recreation, activity, fun,
-              sport, serenity, and the shaded world beneath it.
+              The open ground isn&apos;t one undifferentiated lawn. It&apos;s
+              organised into seven distinct zones, each planted and programmed
+              for a different use — so the person doing laps at six in the
+              morning and the family with a four-year-old at six in the evening
+              aren&apos;t competing for the same patch of grass.
             </p>
           </div>
 
@@ -386,6 +394,36 @@ export default function AmenitiesPage() {
               </article>
             ))}
           </div>
+
+          <div className="max-w-3xl mx-auto mt-16 bg-white rounded-xl border border-[#DCD6C2] p-6 md:p-8">
+            <p className="text-base leading-relaxed text-[#4A5B50] mb-4">
+              Between them the zones carry:
+            </p>
+            <ul className="space-y-2 mb-5">
+              {[
+                "A yoga deck, sited away from the sports courts",
+                "A musical garden",
+                "A pet park — a real one, not a fenced corner",
+                "A tree house for children",
+                "Walking and jogging loops through mature planting",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-sm md:text-base text-[#123528]"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#C0A15C]"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-base font-semibold text-[#123528]">
+              Eighty percent open ground is the figure. Seven zones is what
+              makes it usable.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -400,16 +438,53 @@ export default function AmenitiesPage() {
               <p className="uppercase text-xs tracking-widest text-[#C0A15C] mb-4">
                 Step Into Extravagance
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
                 {project.clubName}
               </h2>
-              <p className="text-base md:text-lg leading-relaxed text-[#EDE9DA]">
-                A retreat within a retreat, Club Roots is designed for those who
-                seek the finest in life. Thoughtfully curated to provide an
-                elite lifestyle, it is a space where indulgence meets
-                sophistication, offering an array of world-class experiences at
-                your doorstep.
+              <p className="text-base md:text-lg leading-relaxed text-[#EDE9DA] mb-5">
+                The clubhouse, and the social centre of the project.
               </p>
+              <ul className="space-y-4">
+                {[
+                  {
+                    name: "Private theatre",
+                    note: "a proper screening room, not a projector in a multipurpose hall.",
+                  },
+                  {
+                    name: "Banquet halls",
+                    note: "for the occasions that would otherwise mean booking a hotel at Pari Chowk.",
+                  },
+                  {
+                    name: "Restaurant",
+                    note: "an in-community dining option, which at 185 families is small enough to actually know you.",
+                  },
+                  {
+                    name: "Gymnasium",
+                    note: "fully equipped, sized for the resident count rather than for the brochure photograph.",
+                  },
+                  {
+                    name: "Games room",
+                    note: "indoor games and recreation.",
+                  },
+                  {
+                    name: "Lounge areas",
+                    note: "the in-between spaces that decide whether a clubhouse gets used daily or only on weekends.",
+                  },
+                ].map((item) => (
+                  <li key={item.name} className="flex items-start gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#C0A15C]"
+                    />
+                    <span className="text-sm md:text-base">
+                      <span className="font-semibold text-[#F0E9D6]">
+                        {item.name}
+                      </span>{" "}
+                      <span className="text-[#CFC7B2]">— {item.note}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div>
@@ -466,6 +541,50 @@ export default function AmenitiesPage() {
         </div>
       </section>
 
+      {/* Sports & Recreation */}
+      <section className="w-full bg-[#F6F4EC] py-16 px-6 md:px-12 lg:px-20 border-b border-[#DCD6C2]">
+        <div className="max-w-4xl mx-auto">
+          <p className="uppercase text-xs tracking-widest text-[#C0A15C] mb-4 text-center">
+            Play It Like a Pro
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#123528] text-center mb-6">
+            Sports &amp; Recreation
+          </h2>
+          <p className="text-lg leading-relaxed text-[#4A5B50] text-center mb-8">
+            <strong className="text-[#123528]">Four swimming pools.</strong>{" "}
+            Across three towers and 185 homes. Do that arithmetic against any
+            project you&apos;re comparing.
+          </p>
+          <ul className="space-y-4 max-w-2xl mx-auto">
+            {[
+              {
+                name: "Pickleball court",
+                note: "still rare in Greater Noida residential projects, and the fastest-growing racquet sport in India right now.",
+              },
+              { name: "Badminton court", note: "" },
+              { name: "Cricket practice facility", note: "" },
+              {
+                name: "Jogging and walking tracks",
+                note: "threaded through the landscaped zones rather than pushed to the boundary wall.",
+              },
+            ].map((item) => (
+              <li key={item.name} className="flex items-start gap-3">
+                <span
+                  aria-hidden="true"
+                  className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#C0A15C]"
+                />
+                <span className="text-sm md:text-base text-[#123528]">
+                  <span className="font-semibold">{item.name}</span>
+                  {item.note ? (
+                    <span className="text-[#4A5B50]"> — {item.note}</span>
+                  ) : null}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Green credentials */}
       <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -484,14 +603,25 @@ export default function AmenitiesPage() {
               Luxury Living Naturally
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#123528] leading-tight mb-6">
-              Green Is Not a Feature Here. It Is the Plan.
+              Wellness &amp; Green Living
             </h2>
             <p className="text-lg leading-relaxed text-[#4A5B50] mb-5">
-              80% of the 4.48-acre site is lush green landscape. Cars descend to
-              the basement at the gate, the towers are set back into the
-              planting, and what is left at ground level is a walkable
-              landscape — lawns, orchards, a bamboo walk and a raised serenity
-              walkway rather than driveways.
+              NorthWind Estates is IGBC Pre-Certified Platinum — among the
+              first residential projects in Greater Noida to hold the rating.
+            </p>
+            <p className="text-base leading-relaxed text-[#4A5B50] mb-5">
+              That&apos;s not a plaque. It governs how the buildings perform:
+              water management, energy efficiency, waste handling, material
+              selection, and the quality of air and daylight inside the homes.
+              It&apos;s also beginning to affect resale values across NCR as
+              buyers get more literate about running costs.
+            </p>
+            <p className="text-base leading-relaxed text-[#4A5B50] mb-5">
+              The 80% landscape figure feeds directly into it. So does the
+              site&apos;s orientation and the spacing between the three towers
+              — decisions made by {project.architect}, the project&apos;s
+              architects, at master-planning stage rather than retrofitted
+              afterwards.
             </p>
             <div className="rounded-xl border border-[#DCD6C2] bg-[#F2EEE0] p-6">
               <p className="text-xs uppercase tracking-widest text-[#6E5B2E] mb-2">
@@ -516,6 +646,35 @@ export default function AmenitiesPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* What low density actually buys you */}
+      <section className="w-full bg-[#0B3B2C] py-16 px-6 md:px-12 lg:px-20 text-[#F0E9D6]">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-5 text-center">
+            What Low Density Actually Buys You
+          </h2>
+          <p className="text-base leading-relaxed text-[#EDE9DA] mb-4">
+            Worth spelling out, because it&apos;s the argument the amenity list
+            can&apos;t make on its own.
+          </p>
+          <p className="text-base leading-relaxed text-[#EDE9DA] mb-4">
+            A project with 1,200 homes and a 60,000 sq.ft. clubhouse has more
+            facilities than NorthWind Estates. It also has fifteen minutes of
+            queuing for a badminton court on a Sunday, a pool you plan around
+            rather than walk into, and a gym that empties out only after ten at
+            night.
+          </p>
+          <p className="text-base leading-relaxed text-[#EDE9DA] mb-4">
+            185 homes changes the experience of every item on this page. Among
+            apartments in Greater Noida marketed on amenities, the number that
+            matters isn&apos;t how many facilities there are — it&apos;s how
+            many people are sharing them.
+          </p>
+          <p className="text-lg font-semibold text-[#C0A15C] text-center mt-6">
+            That ratio is the amenity. Everything else is equipment.
+          </p>
         </div>
       </section>
 
@@ -566,25 +725,24 @@ export default function AmenitiesPage() {
             Begin Where the World Pauses
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-            See the Seven Zones for Yourself
+            See It in Person
           </h2>
           <p className="text-base md:text-lg leading-relaxed mb-4 text-[#EDE9DA]">
-            From the water feature at the Entrance Plaza to the Sky Gazing Deck
-            at the end of the Serenity Walk, every space at {project.name} was
-            drawn to be lived in, not just looked at. Walk the master plan with
-            our team, and see where your home sits within it.
+            Amenity photography is the least trustworthy thing on any real
+            estate website, ours included. The pools look bluer, the lawns look
+            greener, and nobody is ever in the frame.
           </p>
-          <p className="text-sm text-[#CFC7B2] mb-8">
-            Price on request. Share your requirement and our authorised
-            channel-partner team will get back to you with current availability
-            across Amaltas, Banyan and Cedar.
+          <p className="text-base md:text-lg leading-relaxed mb-8 text-[#EDE9DA]">
+            Come and walk it. Sector Pi-1, Greater Noida 201306, about 2 km
+            from GNIDA Metro Station. Fifteen minutes on site will tell you
+            more than this page can.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link
               href="/contact-us"
               className="px-8 py-4 bg-[#C0A15C] text-white font-semibold rounded-lg hover:bg-[#A2854A] transition-colors text-lg"
             >
-              Enquire Now
+              Book a Site Visit →
             </Link>
             <a
               href="/brochure.pdf"
@@ -592,13 +750,30 @@ export default function AmenitiesPage() {
             >
               Download Brochure
             </a>
+          </div>
+          <p className="text-sm text-[#CFC7B2]">
+            Next:{" "}
             <Link
               href="/floor-plans"
-              className="px-8 py-4 border-2 border-[#F0E9D6]/40 text-[#F0E9D6] font-semibold rounded-lg hover:border-[#F0E9D6] transition-colors text-lg"
+              className="text-[#C0A15C] hover:underline font-semibold"
             >
-              Floor Plans
+              Floor plans &amp; master plan →
+            </Link>{" "}
+            ·{" "}
+            <Link
+              href="/price"
+              className="text-[#C0A15C] hover:underline font-semibold"
+            >
+              Price &amp; availability →
+            </Link>{" "}
+            ·{" "}
+            <Link
+              href="/location-connectivity"
+              className="text-[#C0A15C] hover:underline font-semibold"
+            >
+              Location &amp; connectivity →
             </Link>
-          </div>
+          </p>
         </div>
       </section>
 
