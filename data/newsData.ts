@@ -41,7 +41,7 @@ const NewsData: NewsMeta[] = [
       "NorthWind Sanctuary Named Among Greater Noida's First IGBC Pre-Certified Platinum Rated Group Housing Societies",
     slug: "northwind-sanctuary-igbc-platinum-pre-certified",
     excerpt:
-      "NorthWind Sanctuary is one of the first IGBC Pre-Certified Platinum Rated group housing societies in Greater Noida — a Confluence-designed masterplan that gives 80% of its 4.48-acre site to lush green landscape across seven zones.",
+      "NorthWind Estates' Sector Pi-1 project earns Platinum pre-certification for a Confluence-designed master plan that gives 80% of its 4.48-acre site to landscape across seven zones.",
     metaTitle:
       "NorthWind Sanctuary: IGBC Pre-Certified Platinum Rated | Greater Noida",
     metaDescription:

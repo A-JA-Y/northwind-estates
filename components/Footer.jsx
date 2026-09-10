@@ -16,8 +16,8 @@ export default function Footer() {
               NorthWind Sanctuary
             </p>
             <p className="text-gray-400 text-xs leading-relaxed">
-              3 &amp; 4 BHK luxury residences and penthouses across 4.48 acres in
-              Sector Pi-1, Greater Noida, by Northwind Estates Pvt. Ltd.
+              3 &amp; 4 BHK luxury apartments and penthouses across 4.48 acres
+              in Sector Pi-1, Greater Noida, by NorthWind Estates Pvt. Ltd.
             </p>
           </div>
 

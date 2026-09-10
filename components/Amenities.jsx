@@ -39,16 +39,16 @@ import ImageSlider from "@/components/ImageSlider";
 // Drawn from the seven amenity zones in the master plan legend (brochure p.8)
 // and the Club Roots pages (pp.31–35).
 const amenities = [
-  { icon: <FaSwimmingPool />, text: "Main, party, kids' & shallow pools with a waterfall from the sky bridge" },
-  { icon: <FaGlassCheers />, text: "Club Roots — banquet hall, lounge & restaurant" },
-  { icon: <FaFilm />, text: "AV room and games room" },
-  { icon: <FaDumbbell />, text: "Gymnasium, outdoor gym & exercise station" },
-  { icon: <FaLeaf />, text: "Yoga / dance deck and reflexology pathway" },
-  { icon: <FaTableTennis />, text: "Badminton, pickle ball, cricket pitch & putting golf" },
-  { icon: <FaRunning />, text: "Jogging track, skating rink & multi-purpose play court" },
-  { icon: <FaChild />, text: "Kids' play arena, hopscotch, swings & musical garden" },
-  { icon: <FaDog />, text: "Serenity Walk with tree house, tree orchard & pet park" },
-  { icon: <FaShieldAlt />, text: "Gated community with 24×7 security & surveillance" },
+  { icon: <FaSwimmingPool />, text: "Four pools — main, party, kids' and shallow — with a waterfall dropping from the sky bridge" },
+  { icon: <FaGlassCheers />, text: "Club Roots with banquet hall, lounge and restaurant" },
+  { icon: <FaFilm />, text: "AV room / private theatre and games room" },
+  { icon: <FaDumbbell />, text: "Indoor gymnasium, outdoor gym and exercise station" },
+  { icon: <FaLeaf />, text: "Yoga and dance deck with reflexology pathway" },
+  { icon: <FaTableTennis />, text: "Badminton, pickleball, cricket pitch and putting green" },
+  { icon: <FaRunning />, text: "Jogging track, skating rink and multi-purpose court" },
+  { icon: <FaChild />, text: "Kids' play arena, hopscotch, swings and musical garden" },
+  { icon: <FaDog />, text: "Serenity Walk with tree house, orchard and pet park" },
+  { icon: <FaShieldAlt />, text: "Gated entry with 24×7 security and surveillance" },
 ];
 
 import { useModal } from "./ModalContext";
@@ -67,7 +67,7 @@ export default function Amenities() {
             Seven Zones of Amenity
           </h6>
           <h2 className="text-[#F0E9D6] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-3xl mx-auto">
-            The Quiet Reflections of Life
+            Where Every Day Has a Place to Go
           </h2>
         </div>
 
@@ -76,10 +76,10 @@ export default function Amenities() {
           {/* Left */}
           <div className="flex-1 flex flex-col gap-5">
             <p className="text-sm md:text-base leading-relaxed">
-              At Sanctuary, every amenity is more than a feature — it&apos;s a
-              feeling. The 4.48-acre site is organised into seven zones, from the
-              Arrival Zone through to the Serenity Walk, with 80% of the
-              landscape given over to green.
+              Most projects list amenities. NorthWind Estates planned them as a
+              landscape. The 4.48-acre site is divided into seven zones — from
+              the Arrival Plaza to the elevated Serenity Walk — so recreation,
+              fitness and quiet time each have their own corner.
             </p>
 
             <ul className="flex flex-col gap-[18px]">
@@ -97,9 +97,8 @@ export default function Amenities() {
             </ul>
 
             <p className="text-sm md:text-base leading-relaxed mt-1">
-              Tucked within the city&apos;s embrace, Sanctuary is a tranquil
-              retreat where recreation, reflection and togetherness find their
-              perfect rhythm.
+              This is what sets the best apartments in Greater Noida apart — not
+              the number of features, but how naturally they fit into a day.
             </p>
 
             <div className="mt-3">

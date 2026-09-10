@@ -42,7 +42,7 @@ export default function WalkthroughSection() {
           <p className="text-gray-600 text-sm mt-3 max-w-xl mx-auto">
             {hasVideo
               ? `Take a guided tour of the three towers, ${project.clubName} and the seven landscaped zones that thread through Sanctuary.`
-              : "In the heart of the city, yet a world apart. Amaltas, Banyan and Cedar rise over 4.48 acres in Sector Pi-1 — with 80% of the ground given back to lush green landscape and seven amenity zones woven between the towers."}
+              : "Amaltas, Banyan and Cedar rise over 4.48 acres in Sector Pi-1, with 80% of the ground returned to landscape and seven amenity zones threaded between the towers. Among the best flats in Greater Noida, few offer this much sky."}
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function WalkthroughSection() {
                   </p>
                   <p className="text-[#F0E9D6] text-xs md:text-sm mt-1 leading-relaxed">
                     03 towers · 20 floors · 180 luxury apartments and 05
-                    penthouses · 80% lush green landscape
+                    penthouses · 80% green landscape
                   </p>
                 </figcaption>
               </figure>
@@ -79,8 +79,8 @@ export default function WalkthroughSection() {
 
         <div className="text-center">
           <p className="text-sm text-gray-600 mb-3">
-            Want the complete picture — floor plans, specifications and the full
-            brochure? Price on request.
+            Want the full picture — floor plans, specifications and brochure?
+            Price on request.
           </p>
 
           <a

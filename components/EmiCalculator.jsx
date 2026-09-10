@@ -74,19 +74,20 @@ export default function EmiCalculator() {
   return (
     <section className="w-full min-h-screen bg-[#F6F4EC] flex justify-center items-start p-6 box-border">
       <div className="w-full max-w-[480px] bg-white p-6 rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.07)]">
-        <h3 className="text-[11px] font-bold tracking-[0.1em] uppercase mb-1.5 text-gray-900">
+        <h3 className="text-[11px] font-bold tracking-[0.1em] uppercase mb-1 text-[#C0A15C]">
           EMI Calculator
         </h3>
+        <p className="text-lg font-bold text-gray-900 mb-1.5">Plan Your Outflow</p>
         <p className="text-xs text-[#7C8B80] leading-relaxed mb-6">
-          A planning tool, not a quote. Enter the amount you are budgeting for — pricing
-          at NorthWind Sanctuary is shared on enquiry, so nothing here is pre-filled for
-          you.
+          A planning tool, not a quote. NorthWind Estates shares pricing on
+          enquiry, so enter the amount you&apos;re budgeting for and adjust the
+          rest.
         </p>
 
         {/* Loan Amount — user supplied, no default */}
         <div className="mb-6">
           <p className="text-[11px] uppercase tracking-widest text-gray-400 mb-1.5">
-            Amount You Are Planning For
+            Amount
           </p>
           <div className="flex items-center border-b-2 border-gray-900 pb-1">
             <input
@@ -178,8 +179,8 @@ export default function EmiCalculator() {
             </>
           )}
           <p className="text-[11px] text-gray-400 leading-relaxed mt-4">
-            Indicative only. Your actual EMI depends on your lender, eligibility and the
-            rate you are sanctioned.
+            Indicative only. Actual EMI depends on your lender and sanctioned
+            rate.
           </p>
         </div>
       </div>

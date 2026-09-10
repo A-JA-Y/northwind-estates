@@ -6,12 +6,12 @@ import livingDining from "@/assets/living-dining.webp";
 import clubExterior from "@/assets/club-exterior-dusk.webp";
 
 const interiorFeatures = [
-  "Imported marble in foyer, drawing, dining & kitchen",
-  "Wooden flooring in all bedrooms",
-  "Modular kitchen with quartz stone counter",
-  "Modular wardrobes with motion-sensor lights",
-  "2450 mm high UPVC powder-coated windows",
-  "Kohler / Roca / Jaquar (or equivalent) C.P. fittings",
+  "Imported marble in foyer, living, dining and kitchen",
+  "Wooden flooring in every bedroom",
+  "Modular kitchen with quartz counters",
+  "Modular wardrobes with motion-sensor lighting",
+  "2450 mm UPVC powder-coated windows",
+  "Kohler / Roca / Jaquar (or equivalent) fittings",
 ];
 
 const nearby = {

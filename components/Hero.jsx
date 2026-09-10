@@ -61,7 +61,8 @@ const Hero = () => {
             NorthWind Sanctuary
           </h2>
           <p className="text-white/80 text-xs mt-2">
-            3 &amp; 4 BHK residences &middot; Sector Pi-1, Greater Noida
+            By NorthWind Estates &middot; Luxury flats in Sector Pi-1, Greater
+            Noida
           </p>
         </div>
       </div>
@@ -87,16 +88,19 @@ const Hero = () => {
               Your Rare Living
             </p>
             <h2 className="text-white text-4xl lg:text-5xl font-semibold leading-tight">
-              In the heart of the city,
-              <br />
-              yet a world apart
+              Live Rare
             </h2>
             <p className="text-white/85 text-sm mt-5 leading-relaxed max-w-md">
-              4.48 acres. Three towers. 80% lush green landscape. A limited
-              collection of 3 &amp; 4 BHK residences and five penthouses in
-              Sector Pi-1, Greater Noida.
+              NorthWind Sanctuary by NorthWind Estates. Three towers, 4.48
+              acres, 80% green. A limited collection of luxury flats in Greater
+              Noida, Sector Pi-1.
             </p>
-
+            <a
+              href="#book-site-visit"
+              className="cta-shine pointer-events-auto inline-block mt-6 bg-[#C0A15C] hover:bg-[#A2854A] text-white text-xs font-semibold tracking-widest uppercase px-7 py-3 transition-colors duration-200"
+            >
+              Book a Site Visit
+            </a>
           </div>
         </div>
 

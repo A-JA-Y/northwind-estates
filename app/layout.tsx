@@ -32,17 +32,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title:
-    "NorthWind Sanctuary | 3 & 4 BHK Luxury Residences in Sector Pi-1, Greater Noida",
+    "NorthWind Estates Greater Noida | Luxury 3 & 4 BHK Apartments in Sector Pi-1",
   description:
-    "NorthWind Sanctuary is a 4.48-acre IGBC Pre-Certified Platinum rated address in Sector Pi-1, Greater Noida — 3 towers, 3 & 4 BHK residences from 1,895 to 3,750 sq.ft., 5 penthouses, seven landscaped zones across 80% green cover and Club Roots. Live Rare.",
+    "NorthWind Estates Greater Noida brings you NorthWind Sanctuary — 180 luxury apartments and 5 penthouses on 4.48 acres in Sector Pi-1, with 80% green cover and IGBC Platinum pre-certification. Enquire for pricing.",
   keywords: [
+    "NorthWind Estates",
+    "NorthWind Estates Greater Noida",
     "NorthWind Sanctuary",
     "NorthWind Sanctuary Greater Noida",
-    "Northwind Estates",
+    "luxury apartments in Greater Noida",
+    "luxury flats in Greater Noida",
     "3 BHK Greater Noida",
     "4 BHK Greater Noida",
-    "luxury apartments Sector Pi-1",
     "penthouses Greater Noida",
+    "best housing societies in Greater Noida",
     "IGBC Platinum pre-certified group housing",
     "Club Roots",
     "Sector Pi-1 Greater Noida",
@@ -62,9 +65,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "NorthWind Sanctuary | 3 & 4 BHK Residences, Sector Pi-1 Greater Noida",
+    title: "NorthWind Estates Greater Noida | Luxury 3 & 4 BHK Apartments in Sector Pi-1",
     description:
-      "Live Rare. 4.48 acres, 3 towers, 180 luxury apartments and 5 penthouses wrapped in 80% green landscape — with Club Roots at its heart.",
+      "Live Rare. NorthWind Sanctuary by NorthWind Estates — 4.48 acres, 3 towers, 180 luxury apartments and 5 penthouses wrapped in 80% green landscape, with Club Roots at its heart.",
     url: SITE_URL,
     siteName: project.name,
     images: [
@@ -81,9 +84,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "NorthWind Sanctuary | 3 & 4 BHK Residences, Greater Noida",
+    title: "NorthWind Estates Greater Noida | Luxury 3 & 4 BHK Apartments",
     description:
-      "Your Rare Living — 3 & 4 BHK residences and penthouses across 4.48 acres in Sector Pi-1, Greater Noida.",
+      "Your Rare Living — NorthWind Sanctuary by NorthWind Estates: 3 & 4 BHK luxury apartments and penthouses across 4.48 acres in Sector Pi-1, Greater Noida.",
     images: ["/northwind-hero.webp"],
   },
 

@@ -46,28 +46,28 @@ const AboutProject = ({ heading }) => {
           </h6>
 
           <Title className="text-4xl font-bold text-gray-900 leading-tight">
-            About NorthWind Sanctuary
+            About NorthWind Sanctuary by NorthWind Estates
           </Title>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            In the heart of the city, yet a world apart — NorthWind Sanctuary is
-            a 4.48-acre gated address in Sector Pi-1, Greater Noida, built around
-            the idea that less is more. Three towers — Amaltas, Banyan and Cedar
-            — rise over a landscape that keeps 80% of the site green.
+            NorthWind Sanctuary is the flagship residential project of NorthWind
+            Estates — a gated, low-density address in Sector Pi-1 designed on a
+            simple belief: fewer homes, more life around them.
           </p>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            The collection is deliberately limited: 180 luxury apartments and
-            five penthouses in 3 and 4 BHK configurations, alongside a handful of
-            garden villas. Every home opens onto generous balconies, and every
-            path leads back into the seven landscaped zones that make up the
-            grounds.
+            Three towers — Amaltas, Banyan and Cedar — hold just 180 luxury
+            apartments and five penthouses in 3 and 4 BHK formats, with a small
+            number of garden villas at ground level. Every residence opens onto
+            a deep balcony, and every walkway leads into one of the seven
+            landscaped zones that stretch across the site.
           </p>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            Designed by Confluence and IGBC Pre-Certified Platinum, Sanctuary is
-            one of the first group housing societies in Greater Noida to hold
-            that rating.
+            Master-planned by Confluence (est. 1999) and IGBC Pre-Certified
+            Platinum, Sanctuary already ranks among the best housing societies
+            in Greater Noida for buyers who want green-certified living without
+            leaving the city.
           </p>
 
           {/* Headline figures from the brochure */}
@@ -93,9 +93,9 @@ const AboutProject = ({ heading }) => {
           <ul className="flex flex-col gap-2 mt-3">
             {[
               "IGBC Pre-Certified Platinum rated",
-              "Club Roots — a retreat within a retreat",
-              "80% lush green landscape across seven zones",
-              "02 km from GNIDA Metro Station",
+              "Club Roots — a private clubhouse at the centre of the site",
+              "Seven amenity zones across 80% green cover",
+              "2 km from GNIDA Metro Station",
             ].map((item) => (
               <li
                 key={item}

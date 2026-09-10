@@ -48,7 +48,7 @@ export const blogData: BlogMeta[] = [
       "NorthWind Sanctuary Greater Noida: A Buyer's Guide to Amaltas, Banyan and Cedar",
     slug: "northwind-sanctuary-greater-noida-buyers-guide",
     excerpt:
-      "Three towers, 185 homes, 4.48 acres and 80% landscape. What actually separates Amaltas, Banyan and Cedar, how to read the area figures on a floor plan, what the seven zones contain — and the questions you should still put to the developer.",
+      "Three towers, 185 homes, 4.48 acres, 80% green. What actually separates the three formats, how to read carpet vs. saleable area, what the seven zones hold — and the questions worth asking before you book.",
     metaTitle:
       "NorthWind Sanctuary Greater Noida: Buyer's Guide to Amaltas, Banyan & Cedar",
     metaDescription:
@@ -193,7 +193,7 @@ export const blogData: BlogMeta[] = [
       "Sector Pi-1, Greater Noida: A Connectivity Guide to NorthWind Sanctuary's Address",
     slug: "sector-pi-1-greater-noida-connectivity-guide",
     excerpt:
-      "Metro at 2 km. Pari Chowk and Fortis at 5. School at 8. Noida International Airport and Delhi at 30. What those six numbers mean for a weekday — and the expressway grid, universities and commercial belt around them.",
+      "Metro at 2 km. Pari Chowk and Fortis at 5. School at 8. Airport and Delhi at 30. How those numbers shape a working week — and the expressways, universities and commercial belt around them.",
     metaTitle:
       "Sector Pi-1 Greater Noida Connectivity Guide | NorthWind Sanctuary Location",
     metaDescription:

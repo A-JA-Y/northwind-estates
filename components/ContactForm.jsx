@@ -83,15 +83,16 @@ const ContactForm = () => {
         {/* LEFT: Text Block */}
         <div className="md:w-1/3 flex-shrink-0">
           <h3 className="text-xl font-bold text-gray-900 leading-tight">
-            NorthWind Sanctuary — 3 &amp; 4 BHK Residences, Sector Pi-1 Greater
-            Noida
+            NorthWind Sanctuary, Sector Pi-1
           </h3>
           <h6 className="text-[#C0A15C] mt-1 text-[0.9375rem]">
-            Live Rare — 30 minutes from Noida International Airport
+            One of the first IGBC Pre-Certified Platinum group housing
+            societies in Greater Noida
           </h6>
           <p className="text-gray-700 text-sm mt-1">
-            Three towers on 4.48 acres, 80% lush green landscape. Price on
-            request.
+            30 minutes from Noida International Airport. 2 km from the metro.
+            Three towers on 4.48 acres with 80% of the ground kept green. Price
+            on request.
           </p>
         </div>
 

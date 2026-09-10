@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <div className="w-full">
       <h1 className="hidden">
-        {project.name} — 3 &amp; 4 BHK Luxury Residences &amp; Penthouses in{" "}
-        {project.locality}
+        NorthWind Estates Greater Noida — Luxury 3 &amp; 4 BHK Apartments &amp;
+        Penthouses in Sector Pi-1
       </h1>
 
       {/* SCHEMA START */}
@@ -173,6 +173,26 @@ export default function Home() {
       <main className="w-full">
         <section className="px-4 py-6 md:px-[30px] md:py-[45px]">
           <div className="max-w-5xl m-auto">
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <p className="text-[#C0A15C] text-xs font-semibold tracking-widest uppercase mb-3">
+                Your Rare Living
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                Close to everything. Removed from all of it.
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                Some addresses are built to fill a plot. NorthWind Estates
+                Greater Noida built this one to breathe. Across 4.48 acres in
+                Sector Pi-1, just three towers rise above a landscape that stays
+                80% green — leaving space, light and quiet for the 185 families
+                who will call it home.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-3">
+                If you&apos;ve been comparing luxury apartments in Greater Noida
+                and finding the same crowded layouts everywhere, this is the
+                exception.
+              </p>
+            </div>
             <ContactForm />
           </div>
         </section>

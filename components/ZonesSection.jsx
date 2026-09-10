@@ -12,13 +12,13 @@ import underSerenity from "@/assets/kids-play-arena.webp";
 
 // The seven zones of the master plan (brochure p.8).
 const cards = [
-  { title: "The Arrival Zone", note: "Entrance plaza & water feature", image: arrival },
-  { title: "The Recreational Zone", note: "Central lawn & bamboo walk", image: recreational },
-  { title: "The Active Zone", note: "Yoga deck & exercise station", image: active },
-  { title: "Fun & Entertainment", note: "Four pools & party deck", image: fun },
-  { title: "Sports Zone", note: "Pickle ball, cricket & putting golf", image: sports },
-  { title: "The Serenity Walk", note: "Tree house, orchard & pet park", image: serenity },
-  { title: "Under the Serenity Walk", note: "Musical garden & outdoor gym", image: underSerenity },
+  { title: "The Arrival Zone", note: "Entrance plaza and water feature", image: arrival },
+  { title: "The Recreational Zone", note: "Central lawn and bamboo walk", image: recreational },
+  { title: "The Active Zone", note: "Yoga deck and exercise station", image: active },
+  { title: "Fun & Entertainment", note: "Four pools and party deck", image: fun },
+  { title: "Sports Zone", note: "Pickleball, cricket and putting green", image: sports },
+  { title: "The Serenity Walk", note: "Tree house, orchard and pet park", image: serenity },
+  { title: "Under the Serenity Walk", note: "Musical garden and outdoor gym", image: underSerenity },
 ];
 
 export default function ZonesSection() {
@@ -30,7 +30,7 @@ export default function ZonesSection() {
         </h6>
 
         <h2 className="text-center font-semibold text-gray-900 mb-4 text-[clamp(2rem,4vw,2.6rem)] leading-tight">
-          Seven Zones Across 4.48 Acres
+          Seven Zones. One Continuous Green.
         </h2>
 
         <p className="text-center text-gray-500 mb-14 max-w-2xl mx-auto text-sm leading-relaxed">

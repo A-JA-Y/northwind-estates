@@ -20,13 +20,14 @@ export default function ReasonsToInvest() {
           </p>
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Why NorthWind Sanctuary, Sector Pi-1
+            Why NorthWind Estates Greater Noida Makes Sense
           </h2>
 
           <p className="text-gray-600 text-sm mt-4 max-w-2xl mx-auto">
-            A low-density, green-certified address on the Noida–Greater Noida
-            corridor — two kilometres from the metro and half an hour from the
-            new airport.
+            Real estate in Greater Noida is moving fast — the airport, the
+            expressway grid, the universities and the Alpha commercial belt are
+            all pulling demand toward this corridor. Sector Pi-1 sits right in
+            the middle of it.
           </p>
         </div>
 
@@ -40,11 +41,11 @@ export default function ReasonsToInvest() {
 
             <ul className="space-y-4">
               {[
-                { icon: <FaSubway />, text: "02 km / 05 min to GNIDA Metro Station" },
-                { icon: <FaCity />, text: "05 km / 07 min to Pari Chowk" },
-                { icon: <FaHospital />, text: "05 km / 07 min to Fortis Hospital" },
-                { icon: <FaPlane />, text: "30 km / 30 min to Noida International Airport" },
-                { icon: <FaBuilding />, text: "30 km / 30 min to Delhi" },
+                { icon: <FaSubway />, text: "GNIDA Metro Station — 2 km / 5 min" },
+                { icon: <FaCity />, text: "Pari Chowk — 5 km / 7 min" },
+                { icon: <FaHospital />, text: "Fortis Hospital — 5 km / 7 min" },
+                { icon: <FaPlane />, text: "Noida International Airport — 30 km / 30 min" },
+                { icon: <FaBuilding />, text: "Delhi — 30 km / 30 min" },
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <span className="text-[#C0A15C] text-lg">{item.icon}</span>
@@ -62,10 +63,10 @@ export default function ReasonsToInvest() {
 
             <ul className="space-y-4">
               {[
-                { icon: <FaLeaf />, text: "IGBC Pre-Certified Platinum rated" },
-                { icon: <FaSwimmingPool />, text: "80% of 4.48 acres kept as green landscape" },
+                { icon: <FaLeaf />, text: "IGBC Pre-Certified Platinum" },
+                { icon: <FaSwimmingPool />, text: "80% of 4.48 acres kept as landscape" },
                 { icon: <FaBuilding />, text: "Only 180 apartments and 5 penthouses across 3 towers" },
-                { icon: <FaDraftingCompass />, text: "Designed by Confluence, established 1999" },
+                { icon: <FaDraftingCompass />, text: "Architecture by Confluence" },
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <span className="text-[#C0A15C] text-lg">{item.icon}</span>
@@ -77,9 +78,9 @@ export default function ReasonsToInvest() {
         </div>
 
         <p className="text-gray-600 text-sm mt-6 leading-relaxed text-center">
-          Low density is the point. Fewer homes on a larger green footprint means
-          more light, more air and a quieter address — for residents, and for
-          long-term value.
+          Low density isn&apos;t a marketing line here — it&apos;s the plan.
+          Among Greater Noida apartments for sale, homes on this much green with
+          this few neighbours tend to hold value longer and rent easier.
         </p>
       </div>
     </section>

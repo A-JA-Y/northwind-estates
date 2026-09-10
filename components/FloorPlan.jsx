@@ -44,8 +44,8 @@ export default function PlansSection() {
           </h2>
 
           <p className="text-gray-600 text-sm mt-3 max-w-xl mx-auto">
-            Typical unit plans for each of the three towers, from a 1,895 sq.ft.
-            three-bedroom home to a 3,750 sq.ft. four-bedroom residence.
+            From a 1,895 sq.ft. three-bedroom home to a 3,750 sq.ft.
+            four-bedroom residence — three formats, one standard of finish.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function PlansSection() {
 
                 {!isUnlocked && (
                   <div className="absolute inset-0 flex items-center justify-center bg-[#08251C]/50 text-white text-xs font-semibold uppercase tracking-widest">
-                    Unlock to View
+                    Unlock Floor Plans
                   </div>
                 )}
 
@@ -106,8 +106,8 @@ export default function PlansSection() {
           </h6>
 
           <p className="text-gray-600 text-sm mb-6 max-w-lg">
-            The full site layout — three towers, the club, and all seven
-            landscaped zones across 4.48 acres.
+            The full site layout — three towers, Club Roots and all seven zones
+            across 4.48 acres.
           </p>
 
           <div
@@ -127,7 +127,7 @@ export default function PlansSection() {
               </p>
 
               <button className="mt-4 bg-[#C0A15C] text-white text-xs px-6 py-2 rounded uppercase tracking-widest">
-                {isUnlocked ? "View Plan" : "Unlock Now"}
+                {isUnlocked ? "View Plan" : "Unlock Master Plan"}
               </button>
             </div>
           </div>

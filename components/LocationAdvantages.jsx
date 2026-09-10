@@ -24,10 +24,10 @@ export default function LocationAdvantages() {
             </h3>
 
             <p className="text-gray-600 leading-relaxed mb-6 text-sm">
-              Sanctuary sits off the Noida–Greater Noida Link Road, minutes from
-              Pari Chowk and the Alpha Commercial Belt, with the Yamuna
-              Expressway and Noida International Airport within a half-hour
-              drive.
+              Sanctuary sits just off the Noida–Greater Noida Link Road, minutes
+              from Pari Chowk and the Alpha Commercial Belt, with the Yamuna
+              Expressway and Noida International Airport under half an hour
+              away.
             </p>
 
             <dl className="divide-y divide-[#DCD6C2] border-y border-[#DCD6C2]">
@@ -50,7 +50,7 @@ export default function LocationAdvantages() {
             </dl>
 
             <p className="text-[11px] text-gray-500 mt-3 italic">
-              Approximate distance &amp; time. Map not to scale.
+              Approximate distances. Map not to scale.
             </p>
 
             <h3 className="font-bold text-gray-900 mt-8 mb-3 text-base">

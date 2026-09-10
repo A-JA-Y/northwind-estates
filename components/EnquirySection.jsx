@@ -11,7 +11,7 @@ export default function EnquirySection({
   logoSrc = logo,
   logoAlt = "North Wind Estates",
   heading = "Live Rare — Your Rare Living",
-  body = "North Wind Estates is a refined expression of modern living, rooted in over two decades of real estate legacy. With an unwavering focus on design integrity, sustainability and transparency, the brand is shaping elevated spaces that resonate with purpose and elegance. Our flagship development in Greater Noida — NorthWind Sanctuary, three towers set across 4.48 acres with 80% of the ground given back to landscape — offers a thoughtfully crafted lifestyle amidst expansive greens, where architecture meets harmony and every detail is designed to enrich the way you live.",
+  body = "NorthWind Estates is built on more than two decades of real estate experience and a clear point of view: good design, honest construction and transparent dealing. The brand's flagship, NorthWind Sanctuary in Greater Noida, puts that philosophy on the ground — three towers on 4.48 acres, 80% of it green, every home planned around light, air and privacy. It's a new benchmark for luxury flats in Greater Noida, and a signal of where NorthWind Estates is headed.",
 }) {
   const router = useRouter();
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
@@ -81,6 +81,9 @@ export default function EnquirySection({
           </div>
 
           {/* Heading */}
+          <p className={`${theme.fontLabel} uppercase ${theme.accent}`}>
+            About NorthWind Estates
+          </p>
           <h4 className={`${theme.textPrimary} font-semibold`}>{heading}</h4>
 
           {/* Body */}
@@ -105,8 +108,8 @@ export default function EnquirySection({
             <>
               <h6 className={`${theme.fontLabel} uppercase ${theme.accent} mb-3`}>Enquire Now</h6>
               <h6 className={`${theme.fontSubheading} ${theme.textPrimary} mb-4`}>
-                Wish to get a call back from our team? Fill in your details and we&apos;ll
-                share the brochure, floor plans and site-visit details. Price on request.
+                Want a call back? Share your details and we&apos;ll send the
+                brochure, floor plans and site-visit slots. Price on request.
               </h6>
 
               <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
