@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Cloudflare Workers deployment for the NorthWind Sanctuary site.
+  // next.config.ts uses `output: "export"`, so `npm run build` writes a fully
+  // static site to ./out and this Worker only serves those files (no Worker
+  // script and no server runtime is needed).
+  //
+  //   npm run preview   # build, then serve ./out locally with wrangler dev
+  //   npm run deploy    # build, then upload ./out to Cloudflare
+  "name": "northwind-estates",
+  "compatibility_date": "2026-11-01",
+
+  "assets": {
+    "directory": "./out",
+
+    // Next exports pages as /price.html etc.: serve /price from price.html and
+    // redirect /price/ and /price.html to the clean /price URL.
+    "html_handling": "auto-trailing-slash",
+
+    // Unknown paths get Next's generated out/404.html with a real 404 status.
+    "not_found_handling": "404-page"
+  },
+
+  // Keep the *.workers.dev URL and per-version preview URLs for QA.
+  "workers_dev": true,
+  "preview_urls": true
+
+  // Serve the production domain from this Worker once the
+  // thenorthwindestates.com zone is on the same Cloudflare account:
+  // "routes": [
+  //   { "pattern": "thenorthwindestates.com", "custom_domain": true },
+  //   { "pattern": "www.thenorthwindestates.com", "custom_domain": true }
+  // ]
+}

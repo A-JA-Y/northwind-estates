@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footerNavLinks } from "@/data/siteNav";
 import { networkSites } from "@/data/networkSites";
+import { guideLinks } from "@/data/guides";
 
 export default function Footer() {
   const half = Math.ceil(footerNavLinks.length / 2);
@@ -73,6 +74,25 @@ export default function Footer() {
               +91 9810890353
             </div>
           </div>
+        </div>
+
+        {/* Buyer guides — stand-alone pages at the site root */}
+        <div className="mb-8">
+          <p className="text-[#C0A15C] text-[11px] font-semibold tracking-widest uppercase mb-3">
+            Buyer Guides
+          </p>
+          <ul className="flex flex-wrap gap-x-8 gap-y-2">
+            {guideLinks.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-gray-300 text-xs hover:text-[#C0A15C] transition-colors"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Additional Links — sister project websites */}

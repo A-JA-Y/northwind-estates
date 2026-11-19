@@ -1,0 +1,15 @@
+# Response headers for Cloudflare Workers static assets (see wrangler.jsonc).
+# Copied into ./out by `next build`; Cloudflare reads it and never serves it.
+# https://developers.cloudflare.com/workers/static-assets/headers/
+
+# Content-hashed build output (JS, CSS, imported images) never changes in place.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Background and inline video clips for the buyer guides.
+/videos/*
+  Cache-Control: public, max-age=604800
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
