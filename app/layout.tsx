@@ -111,7 +111,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable}  h-full antialiased light `}
     >
-      <Analytics />
+      {/* Vercel Analytics loads /_vercel/insights/script.js, which only exists
+          on Vercel. Skip it on other hosts (e.g. the Cloudflare deploy in
+          wrangler.jsonc) so it doesn't 404 on every page. */}
+      {process.env.VERCEL ? <Analytics /> : null}
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

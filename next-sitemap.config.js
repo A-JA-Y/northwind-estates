@@ -15,6 +15,8 @@ const PRIORITIES = {
   "/amenities": 0.8,
   "/contact-us": 0.8,
   "/about-northwind-estates": 0.7,
+  "/super-built-up-area-vs-carpet-area": 0.7,
+  "/garden-villa-vs-flat-greater-noida": 0.7,
   "/blogs": 0.6,
   "/news": 0.6,
   "/privacy-policy": 0.3,
