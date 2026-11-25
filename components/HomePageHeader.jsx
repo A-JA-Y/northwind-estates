@@ -164,7 +164,7 @@ export default function HomePageHeader() {
         <button
           type="button"
           aria-label="Close menu overlay"
-          className="fixed inset-0 bg-black/40 z-40 xl:hidden"
+          className="fixed inset-0 bg-black/40 z-[45] xl:hidden"
           onClick={() => setOpen(false)}
         />
       )}
