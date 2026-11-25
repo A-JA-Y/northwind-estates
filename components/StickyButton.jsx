@@ -25,6 +25,7 @@ export default function StickyDownloadButton() {
       aria-label="Download the NorthWind Sanctuary brochure"
       className="
         fixed bottom-56 right-0
+        max-md:[@media(max-height:500px)]:bottom-[184px] md:[@media(max-height:500px)]:bottom-40
         flex flex-col items-center justify-center
         bg-[#C0A15C] text-white font-semibold
         shadow-lg transition-colors duration-200
@@ -35,7 +36,7 @@ export default function StickyDownloadButton() {
     >
       <FaDownload size={16} className="rotate-90" />
 
-      <div className="mt-[6px] flex flex-col items-center text-[11px] font-semibold leading-[1.1]">
+      <div className="mt-[6px] flex flex-col items-center text-[11px] font-semibold leading-[1.1] [@media(max-height:500px)]:hidden">
         {"Brochure".split("").map((char, index) => (
           <span key={index}>{char}</span>
         ))}

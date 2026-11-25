@@ -35,6 +35,7 @@ export default function BlogsPage() {
   if (!featured) return null;
 
   return (
+    <>
     <section className="w-full min-h-screen bg-white">
 
       {/* ── HERO ── */}
@@ -167,10 +168,14 @@ export default function BlogsPage() {
         )}
       </div>
 
-      <div className="relative">
-        <StickyDownloadButton />
-      </div>
-
     </section>
+
+    {/* Outside the section: the scroll-reveal transform on `main section`
+        would turn the fixed tab into a scrolling one that runs over the
+        floating Call/WhatsApp buttons. */}
+    <div className="relative">
+      <StickyDownloadButton />
+    </div>
+    </>
   );
 }

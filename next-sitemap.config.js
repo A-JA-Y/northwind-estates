@@ -25,11 +25,16 @@ const PRIORITIES = {
 // Lead-capture confirmation page — must never be indexed.
 const EXCLUDED = ["/thank-you"];
 
+// app/icon.png and app/apple-icon.png build as routes, but they are icons, not
+// pages. Keep them out of the sitemap only: robots.txt must still let crawlers
+// fetch them, or search results cannot show the favicon.
+const ICON_ROUTES = ["/icon.png", "/apple-icon.png"];
+
 module.exports = {
   siteUrl: SITE_URL,
   generateRobotsTxt: true,
   generateIndexSitemap: false,
-  exclude: EXCLUDED,
+  exclude: [...EXCLUDED, ...ICON_ROUTES],
 
   robotsTxtOptions: {
     policies: [

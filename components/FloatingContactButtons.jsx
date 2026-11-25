@@ -1,6 +1,7 @@
 // Floating Call + WhatsApp buttons, fixed to the bottom-right corner of every page.
 // Render once in the root layout. Numbers accept any format ("+91 98108 90353",
 // "919810890353", "9810890353"); 10-digit numbers are treated as Indian (+91).
+// z-30 keeps them at header level, below enquiry modals and mobile menus (z-40/z-50).
 
 const toDigits = (value) => {
   const digits = String(value || "").replace(/\D/g, "");
@@ -27,7 +28,7 @@ export default function FloatingContactButtons({
     "flex h-12 w-12 items-center justify-center rounded-full text-white shadow-xl ring-4 ring-white/60 transition-transform duration-300 hover:scale-110 md:h-14 md:w-14";
 
   return (
-    <div className={`fixed z-40 flex flex-col items-center gap-3 print:hidden ${className}`}>
+    <div className={`fixed z-30 flex flex-col items-center gap-3 print:hidden ${className}`}>
       {callDigits ? (
         <a
           href={`tel:+${callDigits}`}
