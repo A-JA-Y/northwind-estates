@@ -4,7 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import "lite-youtube-embed/src/lite-yt-embed.css";
 import { Analytics } from '@vercel/analytics/next';
-import { SITE_URL, project } from "@/data/project";
+import { SITE_URL, project, contact } from "@/data/project";
 
 
 
@@ -60,10 +60,6 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
-  icons: {
-    icon: "/favicon.ico",
-  },
-
   openGraph: {
     title: "NorthWind Estates Greater Noida | Luxury 3 & 4 BHK Apartments in Sector Pi-1",
     description:
@@ -100,6 +96,7 @@ import { ModalProvider } from "@/components/ModalContext";
 import ModalWrapper from "@/components/ModalWrapper";
 import MobileCtaBar from "@/components/MobileCtaBar";
 import ScrollReveal from "@/components/ScrollReveal";
+import FloatingContactButtons from "@/components/FloatingContactButtons";
 
 export default function RootLayout({
   children,
@@ -144,6 +141,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ModalWrapper />
           <MobileCtaBar />
         </ModalProvider>
+        {/* On phones the stack sits above the sticky MobileCtaBar (and the
+            home-indicator inset); from md up that bar is hidden. */}
+        <FloatingContactButtons
+          phone={contact.phone}
+          message="Hi, I am interested in NorthWind Sanctuary, Sector Pi-1, Greater Noida. Please share the price list and brochure."
+          callClassName="bg-[#0B3B2C] hover:bg-[#08251C]"
+          className="bottom-[calc(4rem_+_env(safe-area-inset-bottom))] right-4 md:bottom-6 md:right-6"
+        />
         <ScrollReveal />
       </body>
     </html>
