@@ -32,6 +32,9 @@ const ICON_ROUTES = ["/icon.png", "/apple-icon.png"];
 
 module.exports = {
   siteUrl: SITE_URL,
+  // Static export: `next build` has already copied public/ into out/ by the time this
+  // runs, so write sitemap.xml (and robots.txt) straight into the deployed folder.
+  outDir: "out",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: [...EXCLUDED, ...ICON_ROUTES],
