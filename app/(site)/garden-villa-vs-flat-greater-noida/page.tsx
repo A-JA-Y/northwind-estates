@@ -494,16 +494,7 @@ export default function GardenVillaVsFlatPage() {
               published. The garden villas and penthouses are priced on request
               only. Ask for the current figures on the{" "}
               <Link href="/price" className={linkClass}>price</Link> page. For
-              context, at nearby{" "}
-              <a
-                href="https://www.godrejgolflink.in/villas-configurations"
-                target="_blank"
-                rel="noopener"
-                className={linkClass}
-              >
-                Godrej Golf Links
-              </a>
-              , a 4 BHK standalone villa on a 125 sq. yd plot is listed at an
+              context, at nearby Godrej Golf Links, a 4 BHK standalone villa on a 125 sq. yd plot is listed at an
               indicative ₹4.0 crore.
             </p>
             <p className={`${bodyClass} mt-4`}>
